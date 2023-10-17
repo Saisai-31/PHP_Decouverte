@@ -1,0 +1,18 @@
+body{
+    background-image: url(php-logo.jpg);
+    background-size: cover;
+    color: white;
+    font-size: x-large;
+}
+
+a{
+    color: white;
+    font-size: large;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
