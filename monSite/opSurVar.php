@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.cssSSSS">
+    <title>Manipuler les variables</title>
 </head>
 <body>
+<a href="index.php">Accueil</a>
+    <a href="opSurVar.php">Opération sur les variables</a>
+    <a href="date.php">Date</a>    
+
     <?php
+        echo "<br>";
         $hab = 15230;
         echo $hab;
         echo "<br>";
