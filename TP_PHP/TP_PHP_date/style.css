@@ -20,8 +20,9 @@ p{
 div{
     text-align: center;
     border: 3px groove lightslategray;
-    width: 300px;
+    width: 400px;
     padding: 10px;
+    padding-right: 40px;
     margin-left: 30vw;
     margin-bottom: 10px;
 }
