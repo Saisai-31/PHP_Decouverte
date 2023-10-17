@@ -53,7 +53,7 @@
     ?>
     </div>
 
-    
+    <div class="decalage">
     <p>TP 4: Formater une Date Personnalisée</p>
         <ul>
             <li>Créez une variable $date contenant une date au format "JJ/MM/AAAA".</li>
