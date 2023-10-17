@@ -11,6 +11,7 @@ h1{
 
 p{
     font-weight: bold;
+    text-align: center;
 }
 
 .decalage{
@@ -18,11 +19,11 @@ p{
 }
 
 div{
-    text-align: center;
+    
     border: 3px groove lightslategray;
-    width: 300px;
+    width: 500px;
     padding: 10px;
-    margin-left: 30vw;
-    margin-bottom: 10px;
+    margin-left: 20vw;
+    margin-bottom: 20px;
 }
 
