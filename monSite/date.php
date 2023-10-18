@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleGrid.css">
     <title>Travaux sur les dates</title>
 </head>
 <body>
-<a href="index.php">Accueil</a>
-    <a href="opSurVar.php">Opération sur les variables</a>
-    <a href="date.php">Date</a>    
+    <header>
+        <nav>
+            <a href="index.php">Accueil</a>
+            <a href="opSurVar.php">Opération sur les variables</a>
+            <a href="date.php">Date</a> 
+            <a href="structureControle.php">Structure de Contrôle</a>   
+            <a href="testCondition.php">Test de conditions</a> 
+            <a href="boucle.php">Les Boucles</a>
+        </nav>
+    </header>
 
+    <div class="content">
+        <h1>Travaux sur les dates</h1>
     <?php
         /*
         Pour manipuler les dates on utilise un groupe date/heure aussi appelé time-stamp qui est issi de la notation Unix.
@@ -112,17 +121,13 @@
         $dateTemps2 = date("d-m-Y H:i:s");
         echo "<br>Date actuelle: $dateTemps2";
 
-
-
-
-
-
-     
-
-
-
-
     ?>
+    </div>
+
+    <footer>
+        <p>Saïsaï</p>
+        &copy;DWWM 2023
+    </footer>
     
 </body>
 </html>
