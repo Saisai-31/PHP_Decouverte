@@ -16,7 +16,7 @@
         </ul>
     <?php
         $dateActuelle = date("Y-m-d H:i:s");
-        echo "<br>Date actuelle: $dateActuelle";
+        echo "<br>Date actuelle : $dateActuelle";
         echo "<br>";
         echo "<br>";
     ?>
@@ -60,12 +60,23 @@
             <li>Affichez cette date au format "AAAA-MM-JJ".</li>
         </ul>
         <?php
+        /*
         $date = "10-12-2023";
         echo $date;
         echo "<br>";
         $timestamp = strtotime($date);
         $date = date("Y-m-d", $timestamp);
         echo $date;
+        */
+
+        //Alternative
+        $d = "29/07/2018";
+        $dt = DateTime::createFromFormat('d/m/Y',$d);
+        $dateAF = $dt->format('Y-m-d');
+        echo $d;
+        echo "<br>";
+        echo $dateAF;
+        
         ?>
     </div>
 

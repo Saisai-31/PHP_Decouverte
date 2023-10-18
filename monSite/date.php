@@ -47,7 +47,7 @@
         n : Le numéro du mois sur 1 chiffre
         y : L'année sur 2 chiffre
         Y : L'année sur 4 chiffres
-        A : Le numéro du jour de la semaine (de 0 à 6 en commmençant par le dimanche)
+        A : Le du jour en lettre
 
         Il est à noter que pour afficher les dates dasn un format local, par exemple en français, il faut utiliser
         l'instruction "strftime" avec les paramètres.

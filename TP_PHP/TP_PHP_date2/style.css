@@ -6,7 +6,8 @@ body{
 h1{
     text-align: center;
     border: 5px groove lightslategray;
-    padding: 20px;
+    padding: 2%;
+    margin-bottom: 500px;
 }
 
 p{
