@@ -64,6 +64,36 @@
 
         echo "<br><br>.........................................<br><br>";
 
+        for($i=1; $i<7; $i++)
+            echo "<h$i> $i : Titre de niveau $i</h$i>";
+            echo "<br>";echo "<br>";
+
+        for($i=1, $j=9; $i<10, $j>0; $i++, $j--)
+            echo "<span style=\"border-style:double;border-width:3;\">$i + $j=10</span>";
+            echo "<br>";echo "<br>";
+
+        echo "h2 Révisez votre table de multiplication</h2>";
+        //Début du  tableau
+        echo "<table border = \ "2" style=\"background-color:yellow\">
+        <th>&nbsp; X &nbsp; </th>";
+        //Créer une 1ere ligne
+        for($i=1; $i<10; $i++){
+            echo "<th>&nbsp; $i&nbsp; <th>";
+        //Fin de la boucle
+        for($i=1; $i<10; $i++){
+            echo "<th>&nbsp; $i&nbsp; </th>";
+        }
+        //Remplissage de la table
+        for($j=1; $j<10; $j++){
+            echo "<td style=\"background-color:red;color:white;\">&nbsp; &nbsp; "<b>".$i*$j."&nbsp; $i&nbsp; </td>";
+            echo "<br>";echo "<br>";
+        }
+        }
+
+
+
+        echo "<br><br>.........................................<br><br>";
+
         //La boucle Foreach
         echo "Boucle FOREACH";
         echo "<br>";
@@ -74,6 +104,7 @@
                 echo $mois. "===> ".$periode. "<br>";
             }
 
+        
 
 
 
