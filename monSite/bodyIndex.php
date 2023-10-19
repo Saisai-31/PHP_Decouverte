@@ -1,6 +1,8 @@
 <div class="content">
         <h1>Découverte des variables</h1>
     <?php
+    echo "J'utilise echo pour afficher :";
+    echo "<br>";
     echo "<br>";
     echo "Paul"; //j'affiche le prénom
     echo "<br>"; //je saute une ligne
@@ -17,6 +19,8 @@
     d'échapper l'apostrophe. Par contre il faut échapper les guillemets du prénom*/
     echo "<br> J'envoi des lettres à \"ma dulcinée\"";
 
+    echo "<br><br>.........................................<br><br>";
+
     /*
     Les variables
     Une variable est un conteneur d'une donnée unique, c'est à dire une boite à chaussure qui ne contient qu'une seule chaussure
@@ -26,7 +30,8 @@
     Le signe = sert donc à affacter une valeur à la variable, il s'agit d'un opérateur d'affectation et non le signé égal que l'on utillise
     dans une opération de calcul.
     */
-
+    echo "J'utilise $ pour créer et appeler une varible et echo l'afficher :";
+    echo "<br>";
     $largeur = 5;
     echo "<br>";
     echo $largeur;
@@ -35,6 +40,8 @@
     $prenom_nom = $prenom." ".$nom;
     echo "<br>".$prenom_nom;
 
+    echo "<br><br>.........................................<br><br>";
+
     /**
      * Fonctions qui s'appliquent aux variables
      * 
@@ -42,9 +49,10 @@
      * substr(variable, debut, longueur) : renvoie une partie de la chaine de caracteres.
      * trim(variable) : supprime les espaces (ou d'autres caracteres) en début et fin de cahine.
      * number_format(variable, "nombre de décimal", "on choisit , ou . comme séparateur de décimale", "espace pour les milliers").
-     * roind(variable, nombre de décimale) : arrondit le nombre.
+     * round(variable, nombre de décimale) : arrondit le nombre.
      */
-
+     echo "J'utilise des fonctions : strlen, substr, trim, number_format et round :";
+     echo "<br>";
      $nom2 = " Marie ROSE ";
      echo "<br>";
      echo strlen($nom2);
@@ -61,13 +69,18 @@
      echo "<br>";
      echo round($prix, 1); //Arrondit à 1 décimale
 
-    //Affectation de variable pa valeur ou pas alias
+     echo "<br><br>.........................................<br><br>";
+
+    //Affectation de variable par valeur ou pas alias
     /**
      * Lorsqu'on affecte une donnée dans une variable, on dit qu'on affecte la variable par valeur. Toutefois, on pourrait 
      * aussi créer un alias à une autre variable. On dit parfois qu'on affecte la variable par référence. 
      * Pour créer un alias vers une autre variable, on utilise le signe & (et commercial ou perpluette).
      * 
      */
+
+     echo"Affectation de variable par valeur ou pas alias";
+     echo "<br>";
      echo "<br>";
      $v1 = "Jacques Chirac";
      $alias = &$v1; // Créé un alias vers $v1

@@ -11,11 +11,18 @@
         */
 
         //Je récupère le fuseau horaire local
+
+        echo "Je récupère le fuseau horaire local :";
+        echo "<br>";
         echo "<br>";
         $fuseau = date_default_timezone_get(); // Affiche UTC
         echo $fuseau;
-        echo "<br>";
 
+        echo "<br><br>.........................................<br><br>";
+
+        echo "J'affiche la date sous divers formats ;";
+        echo "<br>";
+        echo "<br>";
         echo date("j m y")."<br>"; // Affiche la date au format 17 10 23
         echo date("j m Y")."<br>"; // Affiche la date complète à a française 17 10 2023
         echo date("j M Y")."<br>"; // Affiche 17 Oct 2023
