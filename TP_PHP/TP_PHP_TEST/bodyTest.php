@@ -4,19 +4,19 @@
 
 1. Parmi les variables suivantes, lesquelles ont un nom valide : 
     $a, $_a, $a_a, $AAA, $a!, $1a et $a1 ?
-<?php
-	$a;
-	$_a;
-	$a_a;
-	$AAA;
-	$a1;
-	echo "<br>";
-	echo "<br>";
-	echo "a, _a, a_a,AAA, a1";
-	echo "<br>";
-	echo "<br>";
-	echo "<br>";		
-?>
+	<?php
+		$a;
+		$_a;
+		$a_a;
+		$AAA;
+		$a1;
+		echo "<br>";
+		echo "<br>";
+		echo "a, _a, a_a,AAA, a1";
+		echo "<br>";
+		echo "<br>";
+		echo "<br>";		
+	?>
 
 2. Modifier le code ci-dessous pour calculer la moyenne des notes.
 $note_maths = 15; 
