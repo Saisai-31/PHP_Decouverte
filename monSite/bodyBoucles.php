@@ -74,7 +74,7 @@
 
         echo "h2 Révisez votre table de multiplication</h2>";
         //Début du  tableau
-        echo "<table border = \ "2" style=\"background-color:yellow\">
+        echo "<table border = \ 2 style=\"background-color:yellow\">
         <th>&nbsp; X &nbsp; </th>";
         //Créer une 1ere ligne
         for($i=1; $i<10; $i++){
@@ -85,8 +85,11 @@
         }
         //Remplissage de la table
         for($j=1; $j<10; $j++){
-            echo "<td style=\"background-color:red;color:white;\">&nbsp; &nbsp; "<b>".$i*$j."&nbsp; $i&nbsp; </td>";
+            echo "<td style=\"background-color:red;color:white;\">&nbsp; &nbsp; <b>".$i*$j."&nbsp; &nbsp; </td>";
             echo "<br>";echo "<br>";
+        }
+        for ($i = 1, $j = 9; $i < 10 && $j > 0; $i++, $j--) {
+            echo "<span style=\"border-style: double; border-width: 3;\">$i + $j = 10</span>";
         }
         }
 
