@@ -63,14 +63,21 @@
 
         echo "<br><br>.........................................<br><br>";
 
-        $tab = array(
-          array = ("LIBRAIRIE", "TITRES", "REMISE"),
-          array = ("FNAC", "GOOGLE SHEETS", "40%"),
-          array = ("FNAC", "EXCEL", "40%"),
-          array = ("EXPRESS", "GOOGLE DOCS", "30%"),
-          array = ("EXPRESS", "GOOGLE SLIDES", "40%"),
-        )
-
+        $teb = array(
+          array("LIBRAIRIE", "TITRES", "REMISE"),
+          array("FNAC", "GOOGLE SHEETS", "40%"),
+          array("FNAC", "EXCEL", "40%"),
+          array("EXPRESS", "GOOGLE DOCS", "30%"),
+          array("EXPRESS", "GOOGLE SLIDES", "40%"),
+        );
+        echo "<table border width=\"50%\" <tr>";
+        //lecture de chaque ligne
+        foreach($teb as list($librairie, $titre, $remise)){
+          //j'affiche les donées dans les cases du tableau
+          echo "<tr><td>$librairie</td><td>$titre</td><td>$remise</td></tr><br>";
+         
+        };
+        echo "</table>";
     ?>
       
     </div>
