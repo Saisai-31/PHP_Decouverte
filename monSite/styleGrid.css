@@ -35,7 +35,23 @@ footer{
     font-size: 20px;
     text-align: center;
     border-top: 1px solid black;
-    color: bisque
+    color: bisque;
+}
+
+.btn-outline-success{
+    color: bisque !important;
+    border: 1px solid bisque !important;
+}
+
+.navbar{
+    background: royalblue !important; 
+}
+.dropdown-menu{
+    background: royalblue !important;
+}
+
+.dropdown-item:hover{
+    background: blue !important;
 }
 
 nav{
@@ -49,9 +65,9 @@ nav{
 nav a{  
     text-decoration: none;
     margin-right: 20px;
-    height: 100px;
+    height: 50px;
     padding: 10px;
-    color: bisque
+    color: bisque !important;
 }
 
 nav a:hover{
