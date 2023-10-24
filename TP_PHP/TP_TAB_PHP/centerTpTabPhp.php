@@ -26,7 +26,7 @@
     print_r($tableau);
     echo "<br>";
     echo "<br>";
-    echo "La taile de mon tableau est de ".count($tableau)." lignes";
+    echo "La taille de mon tableau est de ".count($tableau)." lignes";
     echo "<br>";
     echo "<br>";
     for($i=0; $i<count($tableau); $i++){
@@ -59,14 +59,14 @@
       $tab["Bob"] = 17;
 
       foreach($tab as $prenom => $note){
-        echo $prenom."->".$note."<br>";
+        echo $prenom."=>".$note."<br>";
       }
 
       echo "<br>";
       echo "<br>";
       $tab["Charlie"] = 16;
       foreach($tab as $prenom => $note){
-        echo $prenom."->".$note."<br>";
+        echo $prenom."=>".$note."<br>";
       }
       echo "<br>";
       echo "<br>";
