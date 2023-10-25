@@ -12,6 +12,12 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.php">TP 1</a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index2.php">TP2</a>
+                    </li>
                
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
