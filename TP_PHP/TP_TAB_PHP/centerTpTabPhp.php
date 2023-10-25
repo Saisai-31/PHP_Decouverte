@@ -13,7 +13,7 @@
       echo "<br>";
       echo "<br>";
 
-      echo "Le deuxième élément du tableau est : ".$tableau[1];
+      echo "Le deuxième élément du tableau est : ".$tableau[1].".";
       echo "<br>";
       echo "<br>";
 
@@ -21,8 +21,10 @@
       print_r($tableau);
       echo "<br>";
       echo "<br>";
+      // Alternatine pour ajouter un élément au Tableaux
+      // array_push($tableau, "Raisin");
 
-      echo "La taille de mon tableau est de ".count($tableau)." lignes";
+      echo "La taille de mon tableau est de ".count($tableau)." éléments.";
       echo "<br>";
       echo "<br>";
       for($i=0; $i<count($tableau); $i++){
@@ -39,7 +41,9 @@
               <li>Ajoutez un nouvel étudiant 'Charlie' avec une note de 16.</li>
               <li>Calculez la moyenne des notes des étudiants et affichez-la.</li>
           </ul>";
-
+      // Alternative pour faire un tableau
+      // $tab = array("Alice"=>18, "Bob"=>15, "Cyril"=>20,"Yolla"=>8);
+ 
       $tab = [
           "Alice"=>18,
           "Bob"=>15,
@@ -70,7 +74,7 @@
         }
         echo "<br>";
         echo "<br>";
-        
+
         $somme = array_sum($tab); //faire la somme des notes
         $moyenne = $somme / count($tab); //Calculer la moyenne
         echo "La moyenne des notes est : " . $moyenne . "<br>";
