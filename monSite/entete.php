@@ -11,27 +11,28 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">Accueil</a>
+                <a class="navbar-brand" href="index.php">PHP</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="opSurVar.php">Opération sur les variables</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="date.php">Dates</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Cours PHP
                     </a>
                     <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="opSurVar.php">Opération sur les variables</a></li>
+                    <li><a class="dropdown-item" href="date.php">Dates</a></li>
                         <li><a class="dropdown-item" href="structureControle.php">Structure de Contrôle</a></li>
                         <li><a class="dropdown-item" href="testCondition.php">Test de conditions</a></li>
                         <li><a class="dropdown-item" href="boucle.php">Les Boucles</a></li>
-                        <li><a class="dropdown-item" href="Tableaux.php">Tableaux</a></li>
+                        <li><a class="dropdown-item" href="tableaux.php">Tableaux</a></li>
+                        <li><a class="dropdown-item" href="fonction.php">Les fonctions</a></li>
+                        <li><a class="dropdown-item" href="formulaire.php">Les formulaires</a></li>
                     </ul>
                     </li>
                 </ul>
