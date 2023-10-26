@@ -79,3 +79,12 @@ table, tr, td,th{
     border: 1px solid black;
     text-align: center;
 }
+
+.d-flex{
+    margin-left: 50vw;
+}
+
+.nav-item{
+    list-style: none;
+    margin-top: 10px;
+}
