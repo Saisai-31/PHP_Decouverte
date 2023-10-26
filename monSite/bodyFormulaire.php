@@ -13,8 +13,7 @@ L'attibut method comprend de type de valeur : GET et POST
 GET : se rapporte aux données du formulaire qui seront transmisent par URL et utilise la variable superglobale $_GET. 
 POST : se rapporte aux données du formulaire qui seront transmisent dans le corps de la requête et utilise la variable superglobale $_POST. 
 Syntaxe : $data = $_GET['dt']; 
-$data = $_POST['dt']; -->
-       
+$data = $_POST['dt']; --> 
 
     <form action="" method="get">
         Nom : <input type="text" name="nom"><br><br>
