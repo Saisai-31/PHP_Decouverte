@@ -33,6 +33,8 @@
                         <li><a class="dropdown-item" href="tableaux.php">Tableaux</a></li>
                         <li><a class="dropdown-item" href="fonction.php">Les fonctions</a></li>
                         <li><a class="dropdown-item" href="formulaire.php">Les formulaires</a></li>
+                        <li><a class="dropdown-item" href="formulaire2.php">Les formulaires Suite</a></li>
+                        <li><a class="dropdown-item" href="varconversiontype.php">Conversion de variables</a></li>
                     </ul>
                     </li>
                 </ul>
