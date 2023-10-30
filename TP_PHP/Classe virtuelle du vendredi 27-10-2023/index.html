@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#">Formulaire</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="content">
+            <form class="form" action="traitement.php" method="post">
+                <fieldset>
+                    <legend><h2>Adresse client</h2></legend>
+                    <label>Prénom :</label><input type="text" name="prenom" size="30" autofocus=""><br><br>
+                    <label>Nom :</label><input type="text" name="nom" size="30" required><br><br>
+                    <label>Adresse</label><input type="texte" name="adresse"><br><br>
+                    <label>Ville</label><input type="texte" name="ville"><br><br>
+                    <label>Code postale</label><input type="texte" name="cp" maxlength="5" pattern="[0-9]{5}"><br><br>
+                    <input class="bouton" type="submit" value="Envoyer">
+                </fieldset>
+                
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Saïsaï</p>
+        &copy;DWWM 2023
+    </footer>
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
