@@ -80,8 +80,9 @@
         // Pour une valeur numérique affectée à la variable c, les deux fonctions retournent TRUE. Ces fonctions et en particulier 
         //isset(), vous permettront de vérifier si un utilisateur a bien rempli tous les champs d'un formulaire.
 
-        $sentier = 0b1101;
-        echo $sentier;
+        //Les entiers
+        $sentier = 0b1101; //valeur hexadécimale
+        echo $sentier; // affiche 13
 
         ?>
 
