@@ -114,7 +114,32 @@
         echo "<br>";
         echo checkdate(12,30,2013);
 
+        echo PHP_VERSION."<br>";
+        echo PHP_OS."<br>";
+        echo $_SERVER["HTTP_ACCEPT_LANGUAGE"]."<br>";
 
+        $x="PHP7";
+        var_dump($x)."<br>";
+        echo "<br>";
+        $a[]=&$x;
+        var_dump($a)."<br>";
+        echo "<br>";
+        $y="8e version de PHP";
+        var_dump($y)."<br>";
+        echo "<br>";
+        $z=$y*10;
+        var_dump($z)."<br>";
+        echo "<br>";
+        $x.=$y;
+        var_dump($z)."<br>";
+        echo "<br>";
+        $y*=$z;
+        var_dump($z)."<br>";
+        echo "<br>";
+        $a[0]="MySQL";
+        var_dump($a[0]) ;
+
+        
         ?>
 
 
