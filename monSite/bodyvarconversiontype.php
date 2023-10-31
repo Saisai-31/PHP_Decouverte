@@ -82,7 +82,38 @@
 
         //Les entiers
         $sentier = 0b1101; //valeur hexadécimale
-        echo $sentier; // affiche 13
+        echo $sentier."<br>"; // affiche 13
+        echo "<br>...................................<br><br>";
+        echo "Revision";
+        echo "<br>";
+        echo "<br>";
+        $n= "manger";
+        echo $n."<br>";
+        print($n)."<br>";
+        print_r($n)."<br>";
+        echo "<br>";
+        var_export($n)."<br>";
+        echo "<br>";
+        var_dump($n)."<br>";
+        echo "<br>";
+        $val = 2.55;
+        var_dump($val)."<br>";
+        echo "<br>";
+        echo "La variable \$val existe";
+        echo "<br>";
+        $a= "Ceci est une variable";
+        if(isset ($a)){
+            echo "La variable \$a existe";
+        }
+        echo "<br>";
+        unset($a);
+        echo "La variable \$a n'existe pas";
+        echo "<br>";
+        echo "<br>";
+        echo date_default_timezone_get();
+        echo "<br>";
+        echo checkdate(12,30,2013);
+
 
         ?>
 
