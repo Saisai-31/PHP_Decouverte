@@ -8,7 +8,7 @@ Un formulaire html est défini entre les balises <form> et </form>.
 method : mode de transmission vers le serveur des informations saisies dans le formulaires.
 action : qui contient le script qui va traiter le formulaire ou les données du formulaire.
 
-L'attibut method comprend de type de valeur : GET et POST
+L'attibut method comprend deux type de valeur : GET et POST
 GET : se rapporte aux données du formulaire qui seront transmisent par URL et utilise la variable superglobale $_GET. 
 POST : se rapporte aux données du formulaire qui seront transmisent dans le corps de la requête et utilise la variable superglobale $_POST. 
 Syntaxe : $data = $_GET['dt']; 
