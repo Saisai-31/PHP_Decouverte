@@ -80,9 +80,66 @@
         // Pour une valeur numérique affectée à la variable c, les deux fonctions retournent TRUE. Ces fonctions et en particulier 
         //isset(), vous permettront de vérifier si un utilisateur a bien rempli tous les champs d'un formulaire.
 
-        $sentier = 0b1101;
-        echo $sentier;
+        //Les entiers
+        $sentier = 0b1101; //valeur hexadécimale
+        echo $sentier."<br>"; // affiche 13
+        echo "<br>...................................<br><br>";
+        echo "Revision";
+        echo "<br>";
+        echo "<br>";
+        $n= "manger";
+        echo $n."<br>";
+        print($n)."<br>";
+        print_r($n)."<br>";
+        echo "<br>";
+        var_export($n)."<br>";
+        echo "<br>";
+        var_dump($n)."<br>";
+        echo "<br>";
+        $val = 2.55;
+        var_dump($val)."<br>";
+        echo "<br>";
+        echo "La variable \$val existe";
+        echo "<br>";
+        $a= "Ceci est une variable";
+        if(isset ($a)){
+            echo "La variable \$a existe";
+        }
+        echo "<br>";
+        unset($a);
+        echo "La variable \$a n'existe pas";
+        echo "<br>";
+        echo "<br>";
+        echo date_default_timezone_get();
+        echo "<br>";
+        echo checkdate(12,30,2013);
 
+        echo PHP_VERSION."<br>";
+        echo PHP_OS."<br>";
+        echo $_SERVER["HTTP_ACCEPT_LANGUAGE"]."<br>";
+
+        $x="PHP7";
+        var_dump($x)."<br>";
+        echo "<br>";
+        $a[]=&$x;
+        var_dump($a)."<br>";
+        echo "<br>";
+        $y="8e version de PHP";
+        var_dump($y)."<br>";
+        echo "<br>";
+        $z=$y*10;
+        var_dump($z)."<br>";
+        echo "<br>";
+        $x.=$y;
+        var_dump($z)."<br>";
+        echo "<br>";
+        $y*=$z;
+        var_dump($z)."<br>";
+        echo "<br>";
+        $a[0]="MySQL";
+        var_dump($a[0]) ;
+
+        
         ?>
 
 

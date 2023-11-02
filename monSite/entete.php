@@ -24,18 +24,27 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Cours PHP
                     </a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="opSurVar.php">Opération sur les variables</a></li>
-                    <li><a class="dropdown-item" href="date.php">Dates</a></li>
-                        <li><a class="dropdown-item" href="structureControle.php">Structure de Contrôle</a></li>
-                        <li><a class="dropdown-item" href="testCondition.php">Test de conditions</a></li>
-                        <li><a class="dropdown-item" href="boucle.php">Les Boucles</a></li>
-                        <li><a class="dropdown-item" href="tableaux.php">Tableaux</a></li>
-                        <li><a class="dropdown-item" href="fonction.php">Les fonctions</a></li>
-                        <li><a class="dropdown-item" href="formulaire.php">Les formulaires</a></li>
-                        <li><a class="dropdown-item" href="formulaire2.php">Les formulaires Suite</a></li>
-                        <li><a class="dropdown-item" href="varconversiontype.php">Conversion de variables</a></li>
-                    </ul>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="opSurVar.php">Opération sur les variables</a></li>
+                            <li><a class="dropdown-item" href="date.php">Dates</a></li>
+                            <li><a class="dropdown-item" href="structureControle.php">Structure de Contrôle</a></li>
+                            <li><a class="dropdown-item" href="testCondition.php">Test de conditions</a></li>
+                            <li><a class="dropdown-item" href="boucle.php">Les Boucles</a></li>
+                            <li><a class="dropdown-item" href="tableaux.php">Tableaux</a></li>
+                            <li><a class="dropdown-item" href="fonction.php">Les fonctions</a></li>
+                            <li><a class="dropdown-item" href="varconversiontype.php">Conversion de variables</a></li>
+                            <li><a class="dropdown-item" href="constante.php">Les Constantes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Les formulaires
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="formulaire.php">Les formulaires</a></li>
+                            <li><a class="dropdown-item" href="formulaire2.php">Les formulaires Suite</a></li>
+                            <li><a class="dropdown-item" href="formulaire3.php">Les formulaires Suite 2</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

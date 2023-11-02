@@ -14,7 +14,7 @@ body{
     flex-direction: column;
 }
 
-main, .content{
+main{
     padding: 20px;
     background: #ff0000;
     background: linear-gradient(13deg,#ff0000 0%, #ffff00 40%, #00ff00 80%);
@@ -22,7 +22,7 @@ main, .content{
     background: -moz-linear-gradient(13deg,#ff0000 0%, #ffff00 40%, #00ff00 80%);
     flex-grow: 1;
     margin: auto;
-    width: 100%
+    width: 100%;
 }
 
 footer{
@@ -52,6 +52,7 @@ nav a{
 
 fieldset{
     margin: auto;
+    margin-top: 50px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
