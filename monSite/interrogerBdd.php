@@ -18,10 +18,11 @@
       echo "<html><style>";
       echo "table, th, td{
         border: 1px solid black;
+        text-align: center;
       }";
    
     echo "</style>";
-    echo "<body><table>";
+    echo "<body><table width=500>";
     echo "<th>"."NumAch"."</th>";
     echo "<th>"."Nom"."</th>";
     echo "<th>"."Age"."</th>";
@@ -43,6 +44,27 @@
     }
     //Ferme la connexion à la base de données
     mysqli_close($cnx);
+
+    /*
+    L'experssion mysqli_num_row($result) renvoie le nombre de lignes dans le jeu de résultats qui est issu de la requête.
+
+    L'expression $result = mysql_query($cnx, $sql) se connecte à la base de données par l'intermédiare de la variable déjà validé $cnx et utilise la requête spécifiée dans la variable $sql pour extraire un jeu de résultats qui est placé dans la variable $result.
+
+    L'expression mysqli_fetch_row(to fetch qui signifie entre autre aller chercher quelqu'un) récupère une ligne d'information dans le jeu de résultats et la renvoie en tant que tableau associatif où chaque colonne représente les champs. Chaque nouvel appel à mysqli_fetch_row() renverra la prochaine ligne dans le jeu de résultats ou la valeur NULL s'il y a plus de ligne. 
+
+    par conséquent, l'expression while(rox = mysqli_fetch_row($result) signifie "tant qu'il y a encore des lignes dans le jeu de résultats, répète les actions ci-dessous.
+
+    ** Qelques fonction MySQL**
+    Pour gérer les informations dans une bdd avec PHP, on utilise communément des fonction MySQLi.
+
+    Opérateurs SQL        ||  Description
+    Mysqli_affected_row       Renvoie le nombre de ligne affectées par la dernière requête
+    Mysqli_close              Ferme une connexion
+    Mysqli_connect_error      Renvoie un message d'erreur
+    Mysqli_errno              Renvoie le dernier message d'erreur
+    Mysql_get_client_info     Renvoie des information sur la librairie du clientMySQL
+    Mysqli_query              Exécut une requête SQL.
+    */
         
     ?>
 
