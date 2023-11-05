@@ -30,7 +30,7 @@
         $nombre3 = null;
         
         while (true) {
-            $nombre = rand(1, 100); // Générer un nombre aléatoire entre 1 et 100
+            $nombre = rand(1, 100); // Génère un nombre aléatoire entre 1 et 100
         
             if ($nombre % 2 == 0) {
                 // Si le nombre est pair, le stocker dans nombre1 et réinitialiser nombre2 et nombre3
@@ -76,11 +76,135 @@
 
 
         echo "Exercice 5, Choisissez un nombre de trois chiffres. Effectuez ensuite des tirages aléatoires, et comptez le nombre de tirages nécessaire pour obtenir le nombre initial. Arrêtez les tirages, et affichez le nombre de coups réalisés. Réalisez ce script d’abord avec l’instruction while puis avec l’instruction for.   <br>";
+        echo "<br>";
+        echo "Avec la boucle while : <br",
+        $nombreInitial = 456;
+        $coups = 0;
+        $nombreTire = null;
+
+        while ($nombreTire !== $nombreInitial) {
+            $nombreTire = rand(100, 999); 
+        }
+
+        echo "Nombre initial : $nombreInitial<br>";
+        echo "Nombre de coups nécessaires avec while : $coups";
+
+        echo "<br>";
+        echo "Avec la boucle for : <br",
+        $nombreInitial = 456;
+        $nombreTire = null;
+
+        for ($coups = 0; $nombreTire !== $nombreInitial; $coups++) {
+            $nombreTire = rand(100, 999);
+        }
+
+        echo "Nombre initial : $nombreInitial<br>";
+        echo "Nombre de coups nécessaires avec for : $coups";
+        echo "<br>";
+        echo "<br>";
 
 
+        echo "Exercice 6, Créez un tableau dont les indices varient de 11 à 36 et dont les valeurs sont des lettres de A à Z. Lisez ensuite ce tableau avec une boucle for puis une boucle foreach, et affichez les indices et les valeurs (la fonction chr(n) retourne le caractère dont le code ASCII vaut n).  <br>";
+
+        // Je créé un tableau et je le remplie avec des lettres de A à Z
+        $tableau = array();
+        $indiceMin = 11;
+        $indiceMax = 36;
+        $lettre = ord('A'); // Convertit la lettre 'A' en son code ASCII
+
+        for ($i = $indiceMin; $i <= $indiceMax; $i++) {
+            $tableau[$i] = chr($lettre);
+            $lettre++; // Incrémente le code ASCII pour passer à la lettre suivante
+        }
+
+        echo "Affichage avec une boucle for :<br>";
+        for ($i = $indiceMin; $i <= $indiceMax; $i++) {
+            echo "Indice : $i, Valeur : " . $tableau[$i] . "<br>";
+        }
+
+        echo "Affichage avec une boucle foreach :<br>";
+        foreach ($tableau as $indice => $valeur) {
+            echo "Indice : $indice, Valeur : $valeur<br>";
+        }
+        echo "<br>";
 
 
+        echo "Exercice 7, Utilisez une boucle while pour déterminer le premier entier obtenu par tirage aléatoire
+        qui soit un multiple d’un nombre donné. Écrivez la variante utilisant la boucle do…while.  <br>";
+        echo "<br>";
+        echo " Avec le boucle while : <br>";
+        $nombreDonne = 7; // Remplacez par le nombre donné de votre choix
+        $entierObtenu = null;
+        while ($entierObtenu === null || $entierObtenu % $nombreDonne !== 0) {
+            $entierObtenu = rand(1, 100);
+        }
+        echo "Le premier entier obtenu qui est un multiple de $nombreDonne est : $entierObtenu";
+        echo "<br>";
+        echo "<br>";
 
+        echo " Avec le boucle do...while : <br>";
+        $nombreDonne = 7; 
+        $entierObtenu = null;
+        do {
+            $entierObtenu = rand(1, 100);
+        } while ($entierObtenu % $nombreDonne !== 0);
+        echo "Le premier entier obtenu qui est un multiple de $nombreDonne est : $entierObtenu";
+        echo "<br>";
+        echo "<br>";
+
+
+        echo "Exercice 8, Recherchez le PGCD (plus grand commun diviseur) de deux nombres donnés. Gérez au moyen d’une exception le cas où au moins un des nombres n’est pas entier  <br>";
+        // Définition de la fonction PGCD (Plus Grand Commun Diviseur)
+        function pgcd($a, $b) {
+            // Vérifie si au moins l'un des deux nombres n'est pas un entier
+            if (!is_int($a) || !is_int($b)) {
+                // Lance une exception avec un message d'erreur approprié
+                throw new Exception("Les deux nombres doivent être des entiers.");
+            }
+            
+            // Algorithme d'Euclide pour calculer le PGCD
+            while ($b != 0) {
+                $temp = $b;
+                $b = $a % $b;
+                $a = $temp;
+            }
+            
+            // Retourne la valeur absolue du PGCD
+            return abs($a);
+        }
+
+        try {
+            // Définir les deux nombres pour lesquels vous souhaitez calculer le PGCD
+            $nombre1 = 48; // Remplacez par le premier nombre
+            $nombre2 = 18; // Remplacez par le deuxième nombre
+            
+            // Appel de la fonction pgcd pour calculer le PGCD
+            $pgcd = pgcd($nombre1, $nombre2);
+            
+            // Affichage du résultat du PGCD
+            echo "Le PGCD de $nombre1 et $nombre2 est : $pgcd";
+        } catch (Exception $e) {
+            // Gestion des exceptions, affiche un message d'erreur en cas de problème
+            echo "Erreur : " . $e->getMessage();
+        }
+
+
+// L'algorithme d'Euclide 
+// est un algorithme classique utilisé pour calculer le plus grand commun diviseur (PGCD) de deux nombres entiers. Il a été développé par le mathématicien grec Euclide au IIIe siècle avant J.C. L'algorithme d'Euclide repose sur le principe que le PGCD de deux nombres ne change pas si on soustrait le plus petit nombre du plus grand jusqu'à ce que les deux nombres soient égaux.
+
+// Voici comment fonctionne l'algorithme d'Euclide :
+
+// Vous avez deux nombres entiers, que nous appellerons a et b.
+
+// Vous divisez le plus grand de ces deux nombres par le plus petit, et vous obtenez un quotient q et un reste r. La division s'écrit sous la forme : a = b * q + r.
+
+// Si r est égal à zéro, alors b est le PGCD des nombres a et b.
+
+// Si r n'est pas égal à zéro, vous répétez le processus avec b et r à la place de a et b. Cela signifie que a devient b et b devient r. Vous revenez à l'étape 2.
+
+// Vous continuez à répéter les étapes 2 à 4 jusqu'à ce que le reste r soit égal à zéro. À ce moment-là, le PGCD est le dernier non nul reste obtenu.
+
+// L'algorithme d'Euclide est efficace pour calculer le PGCD de deux nombres, et il est utilisé dans de nombreuses applications mathématiques et informatiques, notamment en cryptographie, en arithmétique modulaire et en résolution de problèmes de nombres entiers.
 
     ?>
 
