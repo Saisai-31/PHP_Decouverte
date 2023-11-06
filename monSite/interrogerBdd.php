@@ -7,6 +7,7 @@
       On interroge les informations d'une table (bdd) par l'intermédiare d'une requête SQL qui renvoie un jeu de résultat qu'on affiche par la suite dans le navigateur (ou client).
       */
       $cnx = mysqli_connect("localhost", "root", "", "casse2");
+
       if(mysqli_connect_errno()){
       echo "Erreur de connexion à la base ".mysqli_connect_error();
       }
@@ -63,7 +64,7 @@
     Mysqli_connect_error      Renvoie un message d'erreur
     Mysqli_errno              Renvoie le dernier message d'erreur
     Mysql_get_client_info     Renvoie des information sur la librairie du clientMySQL
-    Mysqli_query              Exécut une requête SQL.
+    Mysqli_query              Exécute une requête SQL.
     */
         
     ?>
