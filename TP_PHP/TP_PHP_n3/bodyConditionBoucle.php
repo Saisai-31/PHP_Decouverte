@@ -6,9 +6,9 @@
 
         $nombre = 30;
         if ($nombre % 3 === 0 && $nombre % 5 === 0) {
-            echo "Le nombre est un multiple de 3 et de 5.";
+            echo "Le nombre $nombre est un multiple de 3 et de 5.";
         } else {
-            echo "Le nombre n'est pas un multiple de 3 et de 5.";
+            echo "Le nombre $nombre n'est pas un multiple de 3 et de 5.";
         }
         echo "<br><br>";
 
@@ -52,6 +52,19 @@
             
         }
         echo "La suite composé est : $nombre1, $nombre2, $nombre3";
+// Alternative
+// $compteur = 0;
+// do{
+//     $x = rand(0,1000);
+//     $y= rand(0,1000);
+//     $z= rand(1,1000);
+//     $compteur++;
+//     echo $x, ", ",$y; ", ", $z; "<br>";
+// }
+// While($x%2==1 OR $y%2==0 OR $z%2==0);
+// echo "Résultat obtenu en $compteur tours";
+
+
         echo "<br><br>";
 
 
@@ -73,6 +86,58 @@
             echo $numero . "<br>";
         }
         echo "<br>";
+// Altenative
+// $plaquepart=[];
+// for($i=100;$i<=999;$i++){
+//     $plaque2=' PHP 75';
+//     $plaquefinale=$i.$plaque2;
+//     console_log($plaquefinale);
+//     if($i%100==0){
+//         $plaquepart[]=$plaquefinale;
+//     }
+// }
+// var_dump ($plaquepart);
+
+// Alternative 2
+// for ($i = 1; $i <= 6; $i++) { 
+//     echo $numImmatriculation . " | ";
+//     $parts = explode(" ", $numImmatriculation);
+//     $numero = (int)$parts[0];
+//     $numero++;
+//     $numImmatriculation = $numero . " " . $parts[1] . " " . $parts[2];
+// }
+
+// Alternative 3 de Magne
+// $initx = 80; //lettre P;
+// $initx = 72; //lettre H;
+// $initx = 80; //lettre P;
+// Bouble imbriqué :
+// for($x = $initx; $x<=90; $x++){
+//     for($y = $inity; $x<=90; $y++){
+//         for($z = $initz; $z<=90; $z++){
+//             for($num=100; $num<120; $num+=100){
+//                 echo "Numéro = $num ", chr($x), chr($y), chr($z), " 75<br/><br/>";
+//             }
+//             $initz =65; //On repart de la lettre A pour le 3eme caractere
+//         }
+//         $initz = 65; //On repart de la A pour le 2eme caractere
+//     }
+// }
+// Conserver les multiples de 100
+// for($x = $initx; $x<=90; $x++){
+//     for($y = $inity; $x<=90; $y++){
+//         for($z = $initz; $z<=90; $z++){
+//             for($num=100; $num<1000; $num++){
+//                 $tab[]="$num".chr($x). chr($y). chr($z). " 75";
+//             }
+//             $initz =65;
+//         }
+//         $initz = 65;
+//     }
+// }
+// print_r($tab)
+
+        echo "<br/><br/>";
 
 
         echo "Exercice 5, Choisissez un nombre de trois chiffres. Effectuez ensuite des tirages aléatoires, et comptez le nombre de tirages nécessaire pour obtenir le nombre initial. Arrêtez les tirages, et affichez le nombre de coups réalisés. Réalisez ce script d’abord avec l’instruction while puis avec l’instruction for.   <br>";
@@ -85,11 +150,10 @@
         while ($nombreTire !== $nombreInitial) {
             $nombreTire = rand(100, 999); 
         }
-
         echo "Nombre initial : $nombreInitial<br>";
         echo "Nombre de coups nécessaires avec while : $coups";
-
         echo "<br>";
+
         echo "Avec la boucle for : <br",
         $nombreInitial = 456;
         $nombreTire = null;
@@ -97,7 +161,6 @@
         for ($coups = 0; $nombreTire !== $nombreInitial; $coups++) {
             $nombreTire = rand(100, 999);
         }
-
         echo "Nombre initial : $nombreInitial<br>";
         echo "Nombre de coups nécessaires avec for : $coups";
         echo "<br>";
@@ -128,6 +191,14 @@
         }
         echo "<br>";
 
+// Alternative :
+// $alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";        
+//         echo "La suite de caractères renseignés est la suivante pour \$table2 : ";
+//         for($i=11;$i<=36;$i++){
+//             $table2[$i]=substr($alphabet,$i-11,1);
+//             echo $table2[$i];
+//         }
+
 
         echo "Exercice 7, Utilisez une boucle while pour déterminer le premier entier obtenu par tirage aléatoire
         qui soit un multiple d’un nombre donné. Écrivez la variante utilisant la boucle do…while.  <br>";
@@ -151,6 +222,18 @@
         echo "Le premier entier obtenu qui est un multiple de $nombreDonne est : $entierObtenu";
         echo "<br>";
         echo "<br>";
+
+// //Alternative :
+// $nbre = 57;
+// $compt= 0;
+// $x_= rand(0,1000);
+// //Boucle while : 
+// while($x_%$nbre!=0){
+//     $x_= rand(0,1000);
+//     $compt++
+// }
+// echo "$x_ est un multiple de $nbre : Résultat obtenu en $compt coups";
+// $compt++;
 
 
         echo "Exercice 8, Recherchez le PGCD (plus grand commun diviseur) de deux nombres donnés. Gérez au moyen d’une exception le cas où au moins un des nombres n’est pas entier  <br>";
