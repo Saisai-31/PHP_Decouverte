@@ -199,6 +199,38 @@
 //             echo $table2[$i];
 //         }
 
+// Alternative 2 :
+// $tableau = array(); // Initialise un tableau vide
+
+// $lettre = 'A'; // Initialise la première lettre à 'A'
+
+// for ($i = 11; $i <= 36; $i++) {
+//     $tableau[$i] = $lettre; // Associe l'indice à la lettre actuelle
+//     $lettre++; // Passe à la lettre suivante (par exemple, de 'A' à 'B', 'B' à 'C', etc.)
+// }
+
+// // Affiche le tableau avec une boucle for
+// for ($i = 11; $i <= 36; $i++) {
+//     echo "$i : " . $tableau[$i] . " | ";
+// }
+
+
+// echo "<br/><br/>";
+// echo "<b>Affiche le tabelau avec les indices et valeurs avec la FONCTION chr()</b><br/>";
+// echo '<img src="images/tp_php_n16.png"><br/><br/>';
+
+// $tableau = array(); // Initialise un tableau vide
+
+// for ($i = 11; $i <= 36; $i++) {
+//     $tableau[$i] = chr($i + 54); // Utilise chr() pour obtenir les lettres de A à Z
+// }
+
+// // Affiche le tableau avec les indices et les valeurs avec la fonction chr()
+// foreach ($tableau as $indice => $valeur) {
+//     echo "$indice : $valeur";
+//     echo " | ";
+// }
+echo "<br/><br/>";
 
         echo "Exercice 7, Utilisez une boucle while pour déterminer le premier entier obtenu par tirage aléatoire
         qui soit un multiple d’un nombre donné. Écrivez la variante utilisant la boucle do…while.  <br>";
@@ -270,6 +302,25 @@
             // Gestion des exceptions, affiche un message d'erreur en cas de problème
             echo "Erreur : " . $e->getMessage();
         }
+
+    // Alternative :
+    // function pgcd($a, $b) {
+    //     while ($b != 0) {
+    //         $temp = $b;
+    //         $b = $a % $b;
+    //         $a = $temp;
+    //     }
+    //     return $a;
+    // }
+    
+    // // Remplacez ces nombres par les nombres pour lesquels vous souhaitez
+    // // calculer le PGCD
+    // $a = 48; 
+    // $b = 18;
+    
+    // $resultat = pgcd($a, $b);
+    
+    // echo "Le PGCD de $a et $b est $resultat.";
 
 
 // L'algorithme d'Euclide 
