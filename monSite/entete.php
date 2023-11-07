@@ -35,6 +35,7 @@
                             <li><a class="dropdown-item" href="varconversiontype.php">Conversion de variables</a></li>
                             <li><a class="dropdown-item" href="constante.php">Les Constantes</a></li>
                             <li><a class="dropdown-item" href="cnx_bdd.php">Connexion BDD</a></li>
+                            <li><a class="dropdown-item" href="inserD.php">Insérer les données</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
