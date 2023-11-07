@@ -272,6 +272,15 @@
         }
 
 
+Alternative : 
+function pgcd($a, $b){
+    if(($a <= 0) || ($b <= 0))
+    return ("Veuillez entre 2 arguments");
+while($b > 0){
+    
+}
+}
+
 // L'algorithme d'Euclide 
 // est un algorithme classique utilisé pour calculer le plus grand commun diviseur (PGCD) de deux nombres entiers. Il a été développé par le mathématicien grec Euclide au IIIe siècle avant J.C. L'algorithme d'Euclide repose sur le principe que le PGCD de deux nombres ne change pas si on soustrait le plus petit nombre du plus grand jusqu'à ce que les deux nombres soient égaux.
 
