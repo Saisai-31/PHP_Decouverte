@@ -30,15 +30,22 @@
     echo "<th>"."Ville"."</th>";
     echo "<th>"."Sexe"."</th>";
     //Pour l'ensemble des lignes du jeu résultats, répète
+    // while($row = mysqli_fetch_row($result)){
+    //   echo "<tr>";
+    //   echo "<td>".$row[0]."</td>";
+    //   echo "<td>".$row[1]."</td>";
+    //   echo "<td>".$row[2]."</td>";
+    //   echo "<td>".$row[3]."</td>";
+    //   echo "<td>".$row[4]."</td>";
+    //   echo "</tr>";
+    // }
     while($row = mysqli_fetch_row($result)){
       echo "<tr>";
-      echo "<td>".$row[0]."</td>";
-      echo "<td>".$row[1]."</td>";
-      echo "<td>".$row[2]."</td>";
-      echo "<td>".$row[3]."</td>";
-      echo "<td>".$row[4]."</td>";
+      for($i=0;$i<count($row);$i++){
+      echo "<td>".$row[$i]."</td>";
+  }
       echo "</tr>";
-    }
+  }
     echo "</table></body></html>";
     //Annule le jeu de résultat
     mysqli_free_result($result);

@@ -35,7 +35,6 @@
                             <li><a class="dropdown-item" href="varconversiontype.php">Conversion de variables</a></li>
                             <li><a class="dropdown-item" href="constante.php">Les Constantes</a></li>
                             <li><a class="dropdown-item" href="cnx_bdd.php">Connexion BDD</a></li>
-                            <li><a class="dropdown-item" href="inserD.php">Insérer les données</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -46,6 +45,7 @@
                             <li><a class="dropdown-item" href="formulaire.php">Les formulaires</a></li>
                             <li><a class="dropdown-item" href="formulaire2.php">Les formulaires Suite</a></li>
                             <li><a class="dropdown-item" href="formulaire3.php">Les formulaires Suite 2</a></li>
+                            <li><a class="dropdown-item" href="inserD.php">Insérer les données</a></li>
                         </ul>
                     </li>
                 </ul>

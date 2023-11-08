@@ -9,17 +9,17 @@
     Il y a autant de valeur que de champs. 
 */
 
-        $con = mysqli_connect("localhost", "root", "casse2");
+        $con = mysqli_connect("localhost", "root", "", "casse2");
         if(mysqli_connect_errno()){
             echo "erreur de connexion à la base ".mysqli_connect_errno();
             exit();
         }
 
-        //on crée la requête SQL
-        $sql = "insert into personne (NumAch, Nom, Age, Ville, Sexe) values('', 'Alain', 32, 'Manchester')";
+        //On crée la requête SQL
+        $sql = "insert into personne (NumAch, Nom, Age, Ville, Sexe) values('', 'Alain', 32, 'Manchester', 'M')";
         echo "Insertion réalisée avec succès !";
 
-        $result = mysqli_query($con, $sql) or die ("échec de la requête insert");
+        $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
 
         //Ferme la connexion
         mysqli_close($con);
