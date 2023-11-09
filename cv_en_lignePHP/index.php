@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="styleCV.css">
     <title>CV Cyril Pholoppe</title>
 </head>
-<body>
+    <body>
 
-    <?php
-        include_once('enteteCV.php');
-        include_once('bodyfondCV.php');
-        include_once('bodyCV.php');
-        include_once('footerCV.php');
-    ?>
+        <?php
+            include_once('enteteCV.php');        
+            include_once('fondecran.php');        
+            include_once('bodyCV.php');
+            include_once('footerCV.php');
+        ?>
 
-   
-<script src="bodyfondCV.js"></script>
-</body>
+
+        <script src="fondecran.js"></script>
+
+    </body>
 </html>
