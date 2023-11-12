@@ -6,48 +6,35 @@
 
 body, html {
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
+a{
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 body{
   display: flex;
   flex-direction: column;
+  background-image: url(images/fondecran.jpg);
+  font-family: 'Lato', sans-serif;;
 }
 
-/*Fond d'écrand Parallax Scroll Animation*/
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
+h1, h2, h3{
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-size: 40px;
+  font-weight: bolder;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-svg {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
 
-    .scrollElement {
-      position: absolute;
-      height: 6000px;
-      width: 100px;
-      top: 0;
-      z-index: 1;
-}
 
 /*Main*/
 main{
-    flex-grow: 1;
+    flex-grow:1;
     padding-top: 100px;
     margin: 20px;
-    z-index: 2;
 }
 
 h1{
@@ -57,132 +44,319 @@ h1{
 
 /*Footer*/
 footer{
-    background-color: black;
+   background-color: rgb(125,78,166);
     color: white;
     padding: 10px;
     font-size: 20px;
-    text-align: center;
-    z-index: 0;
     margin-bottom: 0vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-.footer{
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  display: flex;
-  align-items: end;
-}
 
-/* Header avec ses bouttons menu */
+
+/* Header */
 
 header{
   position: fixed;
-  z-index: 3;
+
   width: 100%;
 }
 
-#btnmenu{
-  display: flex;
-  justify-content:space-around;
-  padding: 20px 20px 20px 20px;
+.navbar{
+  background-color: rgb(125,78,166) !important;
+  display: flex !important;
+  align-items: end !important;
 }
 
-.but{
-  height: 50px;   
-  width: 100px;
+.container-fluid{
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: end !important;
+  padding-left: 50px;
 }
 
-button{
-  height: 5vh;
-  width: 10vw;
-  font-size: medium;
-  border-radius: 50px;
-  background-color: rgb(125,78,166);
-  position: fixed;
-  box-shadow: 4px 3px 5px  rgba(51,43,85, 0.7);
-  color: white; 
+.nav-item{
+  padding-left: 50px;
 }
 
-/* Menu Burger*/
-#burger{
-  display: hidden;
-}
-#listeburger{
-  margin-left: 50px;
-  list-style-type: none;
-}
-.menuburger{
-  text-decoration: none;
+.active{
+  color: #ffffff !important;
+  font-size: large;
+  padding: 10px;
+  display: block;
 }
 
-/* Liens */
-
-button:hover{
-  transform: scale(1.2);
-  box-shadow:5px 4px 5px  rgba(51,43,85, 0.7);
+.navbar-brand{
+  padding: 5px;
+}
+.navbar-brand:hover{
+  background-color: black;
+  border-radius: 5px;
+ 
 }
 
-.lienmenu{
-  text-decoration: none;
-  color: white;
+.active:hover{
+  background-color: black;
+  border-radius: 10px;
+  
 }
 
 /*Accueil*/
 
-.curri{
-  border-radius: 50px;
-  border: 5px ridge;
- 
- 
-  margin-left: 40%;
-  height: 450px;
-  width: 55%;
-  padding-top: 5%;
-  background-color: rgb(145, 238, 145,0.50);
+.divphoto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.photo{
-  
-  float: left;
-}
-
-.photo{
+.maphoto{
  border-radius: 50%;
  border: 5px ridge;
- box-shadow:10px 10px 10px 10px rgba(0,0,0,0.5);
+ margin-bottom: 50px;
 }
-
-.photo:hover {
+.maphoto:hover {
   transform: scale(1.2);
 }
+
+.cv{
+  text-decoration: none;
+  border: 5px ridge white;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: rgb(212, 212, 212, 0.7);
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.cv:hover{
+  background-color: #7d4ea6;
+}
+
+#monaccueil{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.presentation{
+  border-radius: 50px;
+  border: 5px ridge;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+
+  width: 55%;
+  background-color: rgb(212, 212, 212, 0.5);
+}
+
+.dwwm{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+#bonjour{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+ 
+
+}
+
+#icones{
+  font-size: 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.ulicone{
+  list-style-type: none;
+  justify-content: center;
+}
+.ulicone li{
+  text-align: center;
+}
+.rotate-icone{
+  transition: transform 1s ease; /* Ajoute une transition fluide à l'effet de rotation */
+}
+.rotate-icone:hover{
+  transform: rotate(360deg); /* Applique une rotation de 360 degrés au survol */
+}
+
+
+/* Présentation */
+
+#presentation{
+  margin-bottom: 100px;
+}
+
+.imgpresentation{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.jemepresente{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: justify;
+  margin-bottom: 100px;
+}
+
+
+/* Compétences */
+#comptetence{
+  margin-bottom: 200px;
+}
+.competences{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  
+}
+.os{
+  background-color: rgb(212, 212, 212, 0.6);
+  width: 400px;
+  display: flex;
+  padding: 10px;
+}
+.langages{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  padding: 10px;
+}
+.outils{
+  background-color: rgb(212, 212, 212, 0.6);
+  width: 400px;
+  padding: 10px;
+}
+.savoirfaire{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  padding: 10px;
+}
+
+
+/* Portfolio */
+
+#portfolio{
+  margin-bottom: 100px;
+}
+
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.imgportfolio{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.photographe{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+.photo{
+  max-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+.photo.agrandie {
+  transform: scale(1.5);
+}
+
 
 
 /* Contact */
 
+#contact{
+  margin-bottom: 150px;
+}
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.imgcontact{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .tablecontact{
   margin: auto;
-  margin-bottom: 20px;
   padding: 10px;
-  width: auto;
+  width: 700px;
   border: 5px outset;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-
+  display: flex;
+  flex-direction: column;
 }
-.tablecontact, tr, td{
+.tablecontact div{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.gmail{
+  text-decoration: none;
+  color: black;
+}
 
-  padding: 10px;
- 
+.mesreseaux{
+  display: flex;
+  flex-direction: row;
+  
+}
+.mesreseaux a:hover{
+  transform: scale(1.2);
+}
+.linkedin{
+  margin-right: 100px;
 }
 
 
-
-form{
+.formulaire{
+  width: 700px;
   margin: auto;
   text-align: center;
-  width: 60%;
 }
+
 fieldset{
   border: 5px outset;
   background-color: rgba(255, 255, 255, 0.5);
@@ -194,43 +368,57 @@ fieldset{
 }
 
 input, textarea{
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   border-radius: 10px;
   margin: 5px;
 }
-
-
-
-.nom{
-  width: 40%;
+.nom, .email, .telephone, .objet{
+  width: 50%;
 }
-
-.email{
-  width: 40%;
-}
-
-.telephone{
-  width: 40%;
-}
-
-.objet{
-  width: 40%;
-}
-
 .texte{
   width: 70%;
 }
-
 .envoyer{
   background-color: rgb(125,78,166);
   color: white;
 }
-
+.envoyer:hover{
+  box-shadow:5px 5px 5px rgba(0,0,0,0.5);
+}
 .annuler{
-  background-color: rgb(254,172,149);
+  background-color:#D4BEAC;
   color: white;
 }
+.annuler:hover{
+  box-shadow:5px 5px 5px rgba(0,0,0,0.5);
+}
+
+
+
+/*Media querries*/
+@media screen and (max-width:1500px) {   
+  .tablecontact{
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width:800px) {   
+    .presentation{
+      width: 90%;
+      gap: 20px;
+    }
+    .cv{
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (max-width:600px) {   
+    .photographe img{
+      width: 400px;
+    }
+    
+  }
 
 
 

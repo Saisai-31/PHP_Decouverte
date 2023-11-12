@@ -1,5 +1,5 @@
 <div class="footer">
     <footer>
-        Cyril Pholoppe &copy; 2023
+        <p>Cyril Pholoppe &copy; 2023</p>
     </footer>
 </div>
