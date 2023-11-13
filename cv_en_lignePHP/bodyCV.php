@@ -187,18 +187,19 @@
             </div>
             <div class="formulaire">
             
-                <form action="traitement_formulaire_cv" method="post">
+                <form action="" method="post">
                     <fieldset>
                         <legend><h2>Contactez moi</h2></legend>
                     <div>
-                        <label>Mademoiselle</label><input type="radio" name="salutation" checked><label>Madame</label><input type="radio" name="salutation"><label>Monsieur</label><input type="radio" name="salutation">
+                        <label>Madame</label><input type="radio" name="salutation" checked class="madame" value="Madame">
+                        <label>Monsieur</label><input type="radio" name="salutation" value="Monsieur">
                     </div>
                     
-                        <input type="text" placeholder="Nom et Prénom" required  class="nom">
-                        <input type="email" placeholder="email@email.com" required class="email">
-                        <input type="tel" placeholder="Téléphone" class="telephone">
-                        <input type="text"placeholder="Objet" class="objet">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Votre message" class="texte"></textarea>
+                        <input type="text" placeholder="Nom et Prénom" required  name="nom" class="nom">
+                        <input type="email" placeholder="email@email.com" required name="email" class="email">
+                        <input type="tel" placeholder="Téléphone" name="telephone" class="telephone">
+                        <input type="text"placeholder="Objet" name="objet" class="objet">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Votre message" class="texte"></textarea>
                         <div>
                                 <input type="submit" class="envoyer">
                                 <input type="reset" value="Annuler" class="annuler">
@@ -208,6 +209,48 @@
                 </div>  
 </div>
     
+<?php
+    //Création des variables pour récupérer les données de mes champs du formulaire
+  
+    $salutation = $_POST['salutation'];
+    $nomPrenom = $_POST['nom'];
+    $email = $_POST['email'];
+    $telephone = $_POST['telephone'];
+    $objet = $_POST['objet'];
+    $message = $_POST['message'];
+
+
+    // //Je teste mes variables en les affichants
+    // echo $salutation."<br>";
+    // echo $nomPrenom."<br>";
+    // echo $email."<br>";
+    // echo $telephone."<br>";
+    // echo $objet."<br>";
+    // echo  $message."<br>";
+
+    // Connexion à la base de données
+    $connexion = mysqli_connect("localhost", "root", "", "contact_cv");
+
+    //Je teste que la connexion s'est bien effectué. Dans le cas contraire je recois un message d'erreur.
+        if(mysqli_connect_errno()){
+            echo "erreur de connexion à la base ".mysqli_connect_error();
+            exit();
+        }
+
+    //Je créé ma reqête d'insertion SQL
+    $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom', '$email', '$telephone', '$objet', '$message')";
+       
+
+
+    $result = mysqli_query($connexion, $sql) or die ("Echec de la requête insert");
+    echo "Vos informations ont bien été envoyées !";
+
+    //Je ferme la connexion
+    mysqli_close($connexion);
+
+
+
+?>
 
             
 </main>

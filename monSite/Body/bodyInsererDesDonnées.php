@@ -11,7 +11,7 @@
 
         $con = mysqli_connect("localhost", "root", "", "casse2");
         if(mysqli_connect_errno()){
-            echo "erreur de connexion à la base ".mysqli_connect_errno();
+            echo "erreur de connexion à la base ".mysqli_connect_error();
             exit();
         }
 

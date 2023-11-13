@@ -373,6 +373,9 @@ input, textarea{
   border-radius: 10px;
   margin: 5px;
 }
+.madame{
+  margin-right: 50px;
+}
 .nom, .email, .telephone, .objet{
   width: 50%;
 }
