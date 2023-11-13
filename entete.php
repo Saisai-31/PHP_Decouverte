@@ -25,6 +25,7 @@
                             <li><a class="dropdown-item" href="conversionVariable.php">Conversion de variables</a></li>
                             <li><a class="dropdown-item" href="constante.php">Les Constantes</a></li>
                             <li><a class="dropdown-item" href="cnx_bdd.php">Connexion BDD</a></li>
+                            <li><a class="dropdown-item" href="rechercher.php">Rechercher dans une BDD</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

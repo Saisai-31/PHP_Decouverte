@@ -128,24 +128,24 @@
         <div class="portfolio">
             <div class="photographe">
             
-                <img class="photo" src="images/Capture site photographe.png" alt="Site photographe" height="300" onclick="agrandirPhoto(1)">
+                <img class="photo" src="images/Capture site photographe.png" alt="Site photographe" height="400" onclick="agrandirPhoto(1)">
                
                 <p><br>Site responsive d'une photographe <br> HTML5 et CSS3</p>
             </div>
             <div class="photographe">
-                <img class="photo" src="images/Gveter.png" alt="Site vétérinaire" height="300" onclick="agrandirPhoto(2)">
+                <img class="photo" src="images/Gveter.png" alt="Site vétérinaire" height="400" onclick="agrandirPhoto(2)">
                 <p><br>Site dynamique et reponsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL</p>
             </div>
             <div class="photographe">
-                <img class="photo" src="images/CaptureFormulaireFlexbox.png" alt="Formulaire Flexbox" height="300" onclick="agrandirPhoto(3)">
-                <p><br>Site responsive d'une photographe <br> HTML5 et CSS3</p>
+                <img class="photo" src="images/CaptureFormulaireFlexbox.png" alt="Formulaire Flexbox" height="400" onclick="agrandirPhoto(3)">
+                <p><br>Formulaire Flexbox <br> HTML5 et CSS3</p>
             </div>
             <div class="photographe">
-                <img class="photo" src="images/chonometre.png" alt="Chronomètre" height="300" onclick="agrandirPhoto(4)">
-                <p><br>Chonomètre <br> HTML5, CSS3 et JavaScript</p>
+                <img class="photo" src="images/chonometre.png" alt="Chronomètre" height="400" onclick="agrandirPhoto(4)">
+                <p><br>Chronomètre <br> HTML5, CSS3 et JavaScript</p>
             </div>
             <div class="photographe">
-                <img class="photo" src="images/morpion.png" alt="Jeu du Morpion" height="300" onclick="agrandirPhoto(5)">
+                <img class="photo" src="images/morpion.png" alt="Jeu du Morpion" height="400" onclick="agrandirPhoto(5)">
                 <p><br>Jeu : Tic-tac-toe  <br> HTML5, CSS3 et JavaScript</p>
             </div>
            
@@ -239,11 +239,11 @@
 
     //Je créé ma reqête d'insertion SQL
     $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom', '$email', '$telephone', '$objet', '$message')";
-       
+ 
 
 
     $result = mysqli_query($connexion, $sql) or die ("Echec de la requête insert");
-    echo "Vos informations ont bien été envoyées !";
+    
 
     //Je ferme la connexion
     mysqli_close($connexion);
