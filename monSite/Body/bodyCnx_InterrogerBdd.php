@@ -54,7 +54,7 @@
     mysqli_close($cnx);
 
     /*
-    L'experssion mysqli_num_row($result) renvoie le nombre de lignes dans le jeu de résultats qui est issu de la requête.
+    L'expression mysqli_num_row($result) renvoie le nombre de lignes dans le jeu de résultats qui est issu de la requête.
 
     L'expression $result = mysql_query($cnx, $sql) se connecte à la base de données par l'intermédiare de la variable déjà validé $cnx et utilise la requête spécifiée dans la variable $sql pour extraire un jeu de résultats qui est placé dans la variable $result.
 

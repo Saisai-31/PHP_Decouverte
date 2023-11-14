@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>TP PHP Dates</title>
-</head>
-<body>
+
+<div class="content">
     <h1>TP PHP Dates</h1>
 
-    <div>    
+     
     <p>TP 1: Afficher la Date Actuelle</p>
         <ul>
             <li>Affichez la date actuelle au format "AAAA-MM-JJ HH:MM:SS".</li>
@@ -80,5 +73,3 @@
         ?>
     </div>
 
-</body>
-</html>
