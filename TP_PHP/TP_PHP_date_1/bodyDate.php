@@ -13,9 +13,8 @@
         echo "<br>";
         echo "<br>";
     ?>
-    </div>
-
-    <div class="decalage">    
+    
+  
     <p>TP 2: Afficher le Jour de la Semaine</p>
         <ul>
             <li>Affichez le nom du jour de la semaine correspondant à la date actuelle.</li>
@@ -26,9 +25,9 @@
     echo strftime("%A").'<br>';
     echo "<br>";
     ?>
-    </div>
+    
 
-    <div>
+
     <p>TP 3: Calculer l'Âge</p>
         <ul>
             <li>Créez une variable $anneeDeNaissance et attribuez-y l'année de naissance d'une personne.</li>
@@ -44,15 +43,14 @@
         echo "<br>";
         echo "<br>";
     ?>
-    </div>
 
-    <div class="decalage">
+    
     <p>TP 4: Formater une Date Personnalisée</p>
         <ul>
             <li>Créez une variable $date contenant une date au format "JJ/MM/AAAA".</li>
             <li>Affichez cette date au format "AAAA-MM-JJ".</li>
         </ul>
-        <?php
+    <?php
         /*
         $date = "10-12-2023";
         echo $date;
@@ -70,6 +68,7 @@
         echo "<br>";
         echo $dateAF;
         
-        ?>
-    </div>
+    ?>
+        
+</div>
 
