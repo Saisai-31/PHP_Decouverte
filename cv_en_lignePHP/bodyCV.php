@@ -217,15 +217,6 @@
         return $connexion;
     }
 
-    // $q = $con->query(
-    //     "select nom, age, ville from personne
-    //     where nom like '%$recherche%' or ville like '%$recherche%'
-    //     limit 12");
-    
-    //     //J'affiche le résultat
-    //     while($r = mysqli_fetch_array($q)){
-    //         echo 'Résultat de la recherche : ' .$r['nom'].', '.$r['ville'].'<br>';
-    //     }
 
     //Retourne true si l'email en parametre existe dans la base 
     // Sinon retourne false
