@@ -10,7 +10,7 @@
             <div id="bonjour">
                 <p>Bonjour,</p>
                 <p>je suis Cyril</p>
-                <h1 class="dwwm">Developpeur Web Junior</h1>
+                <h1 class="dwwm">Développeur Web Junior</h1>
             </div>
             <div id="icones">
                 <ul class="ulicone">
@@ -34,7 +34,7 @@
 <!-- Présentation -->
     <div id="presentation"></div>
     <div class="imgpresentation">
-        <img src="images/presentation.png" alt="Presentation" height="100">
+        <a href="#presentation"><img src="images/presentation.png" alt="Presentation" height="100"></a>
     </div>
 
     <div class="jemepresente">
@@ -50,10 +50,10 @@
             Commercial et Gérant d'Entreprise - Ayant occupé des postes de commercial et de gérant d'entreprise, j'ai acquis des compétences solides en matière de communication, de négociation et de gestion d'équipe. Ces expériences m'ont également permis de développer un sens aigu du service client. 
         </p>
         <p>
-        Travail à l'Usine - Mon passage à l'usine m'a enseigné la rigueur, la gestion du temps et la résolution efficace des problèmes, compétences qui sont cruciales dans le monde professionnel.
+            Travail à l'Usine - Mon passage à l'usine m'a enseigné la rigueur, la gestion du temps et la résolution efficace des problèmes, compétences qui sont cruciales dans le monde professionnel.
         </p>
         <p>
-        Services de Ménage - Les expériences dans les services de ménage ont renforcé mon sens du détail, de l'organisation et de la propreté, des qualités qui se révèlent précieuses dans tout projet, y compris le développement web. 
+            Services de Ménage - Les expériences dans les services de ménage ont renforcé mon sens du détail, de l'organisation et de la propreté, des qualités qui se révèlent précieuses dans tout projet, y compris le développement web. 
         </p>
         
             <h2>Reconversion Professionnelle</h2> 
@@ -70,19 +70,19 @@
 <!-- Compétences -->
     <div id="comptetence"></div>
     <div class="imgpresentation">
-        <img src="images/competence.png" alt="Compétence" height="100">
+        <a href="#comptetence"><img src="images/competence.png" alt="Compétence" height="100"></a>    
     </div>
 
     <div class="competences">
         <div class="os">
-            <ul><h3>Sytème d'exploitation</h3>  
+            <ul><h3>Système d'exploitation</h3>  
                 <li>Windows</li>
                 <li>Mac</li>
                 <li>linux</li>
             </ul>
         </div>
         <div class="langages">
-            <ul><h3>Languages</h3>
+            <ul><h3>Langages</h3>
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Markdown</li>
@@ -123,7 +123,7 @@
 <!-- Portfolio -->
     <div id="portfolio"></div>
     <div class="imgportfolio">
-        <img src="images/portfolio.png" alt="Portfolio" height="100">
+        <a href="#portfolio"><img src="images/portfolio.png" alt="Portfolio" height="100"></a>
     </div>
     <div class="portfolio">
         <div class="photographe">
@@ -134,7 +134,7 @@
         </div>
         <div class="photographe">
             <img class="photo" src="images/Gveter.png" alt="Site vétérinaire" height="400" onclick="agrandirPhoto(2)">
-            <p><br>Site dynamique et reponsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL</p>
+            <p><br>Site dynamique et responsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL</p>
         </div>
         <div class="photographe">
             <img class="photo" src="images/CaptureFormulaireFlexbox.png" alt="Formulaire Flexbox" height="400" onclick="agrandirPhoto(3)">
@@ -154,7 +154,8 @@
 <!-- Contact -->
     <div id="contact"></div>
     <div class="imgcontact">
-        <img src="images/contact.png" alt="Contact" height="100">
+        <a href="#contact"><img src="images/contact.png" alt="Contact" height="100"></a>
+        
     </div>
 
     <div class="contact">
@@ -218,8 +219,8 @@
     }
 
 
-    //Retourne true si l'email en parametre existe dans la base 
-    // Sinon retourne false
+    //Retourne true si l'email en paramètre existe dans la base de données
+    // Sinon retourne false si l'email en paramètre n'existe pas dans la base de donnée
     function checkMail($email, $db){
         // verifier que l email soit rempli
         if($email !== ""){
@@ -242,15 +243,16 @@
     // echo "<pre>".var_dump($_POST)."</pre>";
     
     //trim enlève les espaces à la fin du champs.
-    //Avec isset je vérifie que $_POST existe.
-    //Je vérifie également que les clés (salutation, nom ...) sont bien présente.
-    //A la fin on vérifie que les clées nom et email ne sont pas vide.
+    //Avec isset je vérifie que $_POST existe et que les clés (salutaion, nom, email, ...) existent égalemant 
+    //Je vérifie également que les clés (salutation, nom ...) sont bien présentes.
+    //A la fin je vérifie que les clées nom et email ne sont pas vide.
     if(
         isset($_POST) &&
         isset($_POST['salutation'], $_POST['nom'], $_POST['email'], $_POST['telephone'], $_POST['objet'], $_POST['message']) && 
         trim($_POST['nom']) !== "" && 
         trim($_POST['email']) !== ""
     ){
+        //J'appel ma fonction pour me connecter à la BDD
         $con = connectDb();
                 
         //Création des variables pour récupérer les données de mes champs du formulaire
@@ -266,7 +268,7 @@
         $message = addslashes($_POST['message']);
 
         
-        //to do ajouter vérification de l'email avant insertion
+        //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
         if(checkMail($email, $con)){
             echo "Cet email existe déjà";
         }else{
