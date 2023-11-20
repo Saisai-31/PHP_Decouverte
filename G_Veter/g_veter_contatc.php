@@ -21,6 +21,7 @@
         <textarea name="" id="" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
         <p>Vous pouvez un joindre un fichier (radio, photo, etc...)</p>
         <input type="file" id="file">
+        <input type="datetime-local">
         <input id="envoi" type="submit" value="Envoyer">
         <input id="annule" type="reset" value="Annuler">
     </fieldset>
