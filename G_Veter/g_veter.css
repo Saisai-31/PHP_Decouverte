@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(51, 139, 147), rgb(182, 244, 146));
+}
+
+h1, h2 {
+    text-align: center;
+}
+#nom{
+    margin-top: 50px;
+    font-size: 6rem;
+}
+#presentation{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+#equipe{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+img{
+    width: 20%;
+    border-radius: 20px;
+}
+#image{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.deroulant{
+   
+    width: 20%;
+    color: black;
+    font-size: 1 rem;
+    font-weight: bold;
+}
+.deroul{
+    width: 100%;
+    font-size: small;
+}
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li{
+   
+    margin: 0;
+    padding: 0;
+    float: left; 
+    width: 300px;
+    line-height: 40px;
+    background-color: #D5AF93;
+    text-align: center; 
+}
+header nav li a:hover{
+    background-color: #c8ebbd;
+}
+header nav li a{
+    display: block; 
+    text-decoration: none;
+}
+header nav ul li ul li{
+    display: none;
+}
+
+header nav ul li:hover ul li{
+    display: block;
+}
+
+#bloc{
+    width: 70%;
+    margin: auto;
+    background-color: #D7EDD0;
+    padding: 20px;
+    border-radius: 20px;
+}
+.decalage{
+    margin-left: 100px;
+}
+
+#docteur2{
+    width: 10%;
+    height: 5%;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#docteur{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.Cyril{
+    width: 40%;
+    background-color: #D7EDD0;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+footer{
+    height: 250px;
+    background-color: #D5AF93;
+    margin-top: 50px;
+    display: flex;
+   
+    
+    font-weight: bold;
+    font-style: italic;
+}
+#sai{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 20px;
+}
+/*Carrousel*/
+#caroussel {
+    width: 300px;
+    height: 225px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+}
+.tailleimg{
+    width: 300px;
+}
+.cassImages {
+    display: flex;
+    animation-duration: 25s;
+    animation-name: mesImages;
+    animation-iteration-count: infinite;
+}
+@keyframes mesImages{
+    0% {
+        transform: translateX(0);
+    } 
+    20% {
+        transform: translateX(-300px);
+    } 
+    40% {
+        transform: translateX(-600px);
+    }
+    60% {
+        transform: translateX(-900px);
+    }
+    80% {
+        transform: translateX(-1200px);
+    }
+    100% {
+        transform: translateX(-1500px);
+    }
+    120% {
+        transform: translateX(0px);
+        
+    }
+}
+
+/*Page Services*/
+#Services{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.serv{
+    width: 500px;
+    height: 50px;
+    background-color: bisque;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+#nosserv{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/*Page urgence*/
+#urveto{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+#urgence{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   align-items: center;
+   margin: auto;
+   background-color: bisque;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+/*Page Prix*/
+#tarifs{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+table{
+    margin: auto;
+    background-color: #D7EDD0;
+}
+tr, td{
+    padding: 10px;
+}
+td:nth-child(2){
+    text-align: center;
+}
+
+/*Page Contact*/
+#info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 3px groove lightgrey;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #D7EDD0;
+}
+
+input,textarea{
+    width: 100%;
+    background-color: #D7EDD0;
+    border: 2px groove lightgrey;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+input{
+    height: 30px;
+    
+}
+#text{
+    border-radius: 20px 20px 0 0;
+}
+
+#file{
+    height: 35px;
+}
+
+#envoi{
+    background-color: lightgrey;
+    font-weight: bold;
+    cursor: pointer;
+}
+#annule{
+    border-radius: 0 0 20px 20px;
+    background-color: lightgrey;
+    font-weight: bold;
+    cursor: pointer;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+}
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+/*Ajout des Média Querries pour différents formats de smartphones et tablettes*/
+@media screen and (max-width:800px) {
+    body{
+        background: linear-gradient(to right, rgb(125, 24, 219), rgb(11, 192, 208));
+            display: block;
+        }   
+    .deroulant{ 
+        font-size: small;
+    }
+    .Cyril{
+        width: 80%;
+        background-color: #D7EDD0;
+        text-align: center;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    fieldset{
+        width: 80%;
+    }
+       
+}
+
+@media screen and (max-width:400px) {
+    .deroulant{
+        width: 390px;
+    }
+    
+}
+
+@media screen and (max-width:375px) {
+    .deroulant{
+        width: 375px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .deroulant{
+        width: 360px;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .deroulant{
+        width: 280px;
+    }
+}

@@ -214,6 +214,7 @@ header{
 
 .jemepresente{
   background-color: rgba(255, 255, 255, 0.5);
+  border: 5px outset;
   border-radius: 20px;
   padding: 20px;
   text-align: justify;
@@ -234,6 +235,7 @@ header{
 }
 .os{
   background-color: rgb(212, 212, 212, 0.6);
+  border: 5px outset;
   border-radius: 20px;
   width: 400px;
   display: flex;
@@ -242,18 +244,21 @@ header{
 .langages{
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
+  border: 5px outset;
   border-radius: 20px;
   width: 400px;
   padding: 10px;
 }
 .outils{
   background-color: rgb(212, 212, 212, 0.6);
+  border: 5px outset;
   border-radius: 20px;
   width: 400px;
   padding: 10px;
 }
 .savoirfaire{
   background-color: rgba(255, 255, 255, 0.5);
+  border: 5px outset;
   border-radius: 20px;
   width: 400px;
   padding: 10px;
@@ -283,7 +288,7 @@ header{
 .photographe{
   text-align: center;
   background-color: rgb(212, 212, 212, 0.6);
-  /* background-color: rgba(255, 255, 255, 0.5); */
+  border: 5px outset;
   display: flex;
   flex-direction: column;
   align-items: center;
