@@ -2,12 +2,9 @@
     include('entete.php');
 ?>
 
-<form action="" method="post">
+<form action="" method="get">
     <input type="text" name = "id">
-    <input type="text" name = "nom">
-    <input type="text" name = "prenom">
-    <input type="text" name = "email">
-    <input type="submit" name = "Envoyer">
+    <input type="submit" value = "Envoyer">
 </form>
 <br>
 
@@ -18,22 +15,20 @@
     $dbname = 'mbdd';
 
     $conn = new mysqli($servername, $username,$password,$dbname);
-        if($conn -> connect_error){
-            die("Connexion failed : " .$conn -> connect_error);
-        }
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $id = $_POST["id"];
-            $nom = $_POST["nom"];
-            $prenom = $_POST["prenom"];
-            $email = $_POST["email"];
+    if($conn -> connect_error){
+        die("Connexion failed : " .$conn -> connect_error);
+    }
+    if(isset($_GET["id"])){
+        $id = $_GET["id"];
+    
 
-            $query = "UPDATE utilisateurs SET nom = '$nom', prenom = '$prenom', email = '$email' WHERE id_utilisateur = $id";
-        
+        $query = "DELETE FROM utilisateurs WHERE id_utilisateur = $id";
+    
 
         if($conn -> query($query) === TRUE){
-            echo "Bravo, l'utilisateur est mis à jour avec succès !<br><br>";
+            echo "Bravo, l'utilisateur a été supprimé avec succès !<br><br>";
         }else{
-            echo "Erreur : ".$query."<br>".$conn -> error;
+            echo "Erreur lor de la suppression : ".$query."<br>".$conn -> error;
         }
     }
 
@@ -52,4 +47,5 @@
     }
 
     $conn -> close();
+
 ?>
