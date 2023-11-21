@@ -50,24 +50,24 @@
 
         foreach($personnes as $nom =>$indice){
             echo "Non : ".$nom.", Prénom : ".$indice['Prenom'].", Ville de résidence : ".$indice['Ville'].", Age : ".$indice['Age']." ans.<br>";
-         }
+            }
 
-         echo "<br><br>";
+        echo "<br><br>";
 
 
-         echo "Exercice 4 : Utilisez une boucle while pour lire les tableaux des exercices 1 et 2.<br><br>";
-         $index = 0;
-         //count($personnes)
-         while($index < 1){
-            print_r($personnes);
-            $index++;
-         }
-         echo "<br><br>";
+        echo "Exercice 4 : Utilisez une boucle while pour lire les tableaux des exercices 1 et 2.<br><br>";
+        $index = 0;
+        //count($personnes)
+        while($index < 1){
+        print_r($personnes);
+        $index++;
+        }
+        echo "<br><br>";
 
-         echo "Exercice 5 : Créez un tableau contenant une liste d’adresses de sites recommandés, puis créez un lien aléatoire vers le premier site de la liste après avoir trié le tableau en ordre aléatoire.<br>";
-         // shuffle — Mélange les éléments d'un tableau
-         // Suivant le type de tableau et mes besoin, j'aurais pu utiliser : 
-         // array_rand — Prend une ou plusieurs clés, au hasard dans un tableau
+        echo "Exercice 5 : Créez un tableau contenant une liste d’adresses de sites recommandés, puis créez un lien aléatoire vers le premier site de la liste après avoir trié le tableau en ordre aléatoire.<br>";
+        // shuffle — Mélange les éléments d'un tableau
+        // Suivant le type de tableau et mes besoin, j'aurais pu utiliser : 
+        // array_rand — Prend une ou plusieurs clés, au hasard dans un tableau
 
         $listeSites = ['www.site1.com', 'www.site2.fr', 'www.site3.org', 'www.site4.net', 'www.site5.th'];
         print_r($listeSites);
@@ -111,6 +111,43 @@
             echo '</tr>';
         }   
         echo '</table>';
+        echo "<br><br>";
+
+
+        echo "Exercice 7 : Créez un tableau contenant une liste d’adresses e-mail. Extrayez le nom de serveur de ces données, puis réalisez des statistiques sur les occurrences de chaque fournisseur
+        d’accès.<br>";
+        // Tableau contenant une liste d'adresses e-mail
+        $listeAdressesEmail = [
+        'user1@example.com',
+        'user2@gmail.com',
+        'user3@hotmail.com',
+        'user4@example.com',
+        'user5@yahoo.com',
+        'user6@gmail.com',
+        ];
+
+        // Tableau pour stocker les occurrences des fournisseurs d'accès
+        $statistiquesFournisseurs = [];
+
+        // Extraction du nom de serveur pour chaque adresse e-mail
+        foreach ($listeAdressesEmail as $adresse) {
+            $emailParts = explode('@', $adresse); // explode : divise l'adresse e-mail en deux parties : nom d'utilisateur et nom de domaine
+            $serveur = isset($emailParts[1]) ? $emailParts[1] : ''; // Récupère le nom de domaine (le serveur)
+
+        // Stocke et compte les occurrences du nom de domaine
+        if (!isset($statistiquesFournisseurs[$serveur])) { // isset — Détermine si une variable est déclarée et est différente de null
+            $statistiquesFournisseurs[$serveur] = 1; // Si c'est la première fois qu'on le rencontre, initialisation à 1
+        } else {
+            $statistiquesFournisseurs[$serveur]++; // Sinon, incrémentation du compteur
+        }
+        }
+
+        // Affichage des statistiques des fournisseurs d'accès
+        echo '<pre>';
+        print_r($statistiquesFournisseurs);
+        echo '</pre>';
+
+
 
 
 
