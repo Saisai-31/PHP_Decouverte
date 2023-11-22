@@ -37,6 +37,12 @@ main{
     margin: 20px;
 }
 
+/*Effet Fondu entre section*/
+section {
+  opacity: 0;
+  transition: opacity 1.5s ease;  /* Ajoute une transition d'opacité pour un effet fondu */
+}
+
 h1{
   text-align: center;
   margin-bottom: 20px;
@@ -104,6 +110,13 @@ header{
 }
 
 /*Accueil*/
+#accueil{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
 
 .divphoto{
   display: flex;
@@ -135,14 +148,6 @@ header{
 }
 .cv:hover{
   background-color: #7d4ea6;
-}
-
-#monaccueil{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 100px;
 }
 
 .presentation{
@@ -200,11 +205,48 @@ header{
   transform: rotate(360deg); /* Applique une rotation de 360 degrés au survol */
 }
 
+/*Animation gauche et droite*/
+.divphoto,
+.presentation {
+    opacity: 0; /* Je m'assure que les éléments sont initialement cachés */
+    transition: opacity 0.5s ease, transform 1s ease; /* Transition d'opacité et de transformation */
+}
+
+.animate-left {
+    animation: slideFromLeft 2s ease forwards; /* Animation pour apparaître depuis la gauche */
+}
+
+.animate-right {
+    animation: slideFromRight 2s ease forwards; /* Animation pour apparaître depuis la droite */
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px); /* Déplacement initial depuis la gauche */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Déplacement final à la position normale */
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px); /* Déplacement initial depuis la droite */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Déplacement final à la position normale */
+    }
+}
+
 
 /* Présentation */
 
 #presentation{
-  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .imgpresentation{
@@ -218,13 +260,12 @@ header{
   border-radius: 20px;
   padding: 20px;
   text-align: justify;
-  margin-bottom: 100px;
 }
 
 
 /* Compétences */
 #comptetence{
-  margin-bottom: 200px;
+  padding-top: 100px;
 }
 .competences{
   display: flex;
@@ -268,7 +309,7 @@ header{
 /* Portfolio */
 
 #portfolio{
-  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .portfolio{
@@ -284,6 +325,45 @@ header{
   text-align: center;
   margin-bottom: 50px;
 }
+
+/* Styles pour le modal (affichage agrandi).
+Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à l'écran, qui affiche les images agrandies et leurs descriptions.  */
+.modal {
+  position: fixed; /* je fixe la position de l'élément par rapport à la fenêtre du navigateur, indépendamment du défilement de la page. Cela permet de maintenir la fenêtre modale à sa position même si l'utilisateur fait défiler la page.*/
+  top: 50%; /* top et left définissent la position de départ de l'élément à 50% de la hauteur et de la largeur de la fenêtre du navigateur. Cela place l'élément modal au centre de l'écran, mais pas parfaitement centré visuellement.*/
+  left: 50%;
+  transform: translate(-50%, -50%); /*Cette transformation translate déplace l'élément de -50% de sa propre largeur et hauteur, en corrigeant ainsi son positionnement pour le centrer parfaitement. -50% est utilisé pour compenser la moitié de la taille de l'élément, ce qui le replace au centre.*/
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000; /*Cela contrôle l'empilement des éléments. Une valeur de z-index plus élevée permet à l'élément d'apparaître au-dessus des autres éléments avec une valeur z-index plus basse.*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+/*En utilisant max-width et max-height à 80%, je limite la taille maximale de l'image à 80% de la largeur et de la hauteur de l'élément modal, et en utilisant object-fit: contain; je m'assure que l'image reste bien proportionnée et ne sera pas déformée tout en remplissant la boîte définie par ces pourcentages. Cela permet d'afficher une image agrandie, mais contrôlée et adaptée à l'intérieur de la fenêtre modale.*/
+
+.modal p {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
 
 .photographe{
   text-align: center;
@@ -312,7 +392,7 @@ header{
 /* Contact */
 
 #contact{
-  margin-bottom: 150px;
+  padding-top: 100px;
 }
 
 .imgcontact{
