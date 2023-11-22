@@ -209,7 +209,7 @@ header{
 .divphoto,
 .presentation {
     opacity: 0; /* Je m'assure que les éléments sont initialement cachés */
-    transition: opacity 0.5s ease, transform 1s ease; /* Transition d'opacité et de transformation */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition d'opacité et de transformation */
 }
 
 .animate-left {
