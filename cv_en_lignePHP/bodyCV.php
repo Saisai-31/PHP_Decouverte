@@ -1,6 +1,6 @@
 <main>
 <!-- Accueil -->
-    <div id="monaccueil">
+    <section id="monaccueil">
         <div class="divphoto">
             <img src="images/cyril.jpg" alt="Ma photo" height="300" class="maphoto">
 
@@ -28,7 +28,7 @@
             
             </div>
         </div>
-    </div>
+    </section>
 
 
 <!-- Présentation -->
@@ -37,7 +37,7 @@
         <a href="#presentation"><img src="images/presentation.png" alt="Presentation" height="100"></a>
     </div>
 
-    <div class="jemepresente">
+    <<section class="jemepresente">
         <p>
             <h1>Je suis Cyril Pholoppe</h1> 
             Un professionnel polyvalent ayant évolué dans des domaines aussi divers que la vente, la gestion d'entreprise, le travail en usine et même les services de ménage. Cette expérience hétéroclite m'a apporté une grande capacité d'adaptation, une autonomie affirmée et une aptitude à travailler efficacement en équipe.
@@ -64,7 +64,7 @@
         <p>
             Je suis enthousiaste à l'idée de mettre à profit ma polyvalence et mes compétences nouvellement acquises en développement web. N'hésitez pas à me contacter pour discuter de projets passionnants ou de toute opportunité de collaboration dans le domaine du web.
         </p>
-    </div>
+    </section>
 
 
 <!-- Compétences -->
@@ -73,12 +73,12 @@
         <a href="#comptetence"><img src="images/competence.png" alt="Compétence" height="100"></a>    
     </div>
 
-    <div class="competences">
+    <section class="competences">
         <div class="os">
             <ul><h3>Système d'exploitation</h3>  
                 <li>Windows</li>
                 <li>Mac</li>
-                <li>linux</li>
+                <li>Linux</li>
             </ul>
         </div>
         <div class="langages">
@@ -117,7 +117,7 @@
                 <li>Versionning</li>
             </ul>
         </div>          
-    </div>
+    </section>
 
 
 <!-- Portfolio -->
@@ -125,7 +125,7 @@
     <div class="imgportfolio">
         <a href="#portfolio"><img src="images/portfolio.png" alt="Portfolio" height="100"></a>
     </div>
-    <div class="portfolio">
+    <section class="portfolio">
         <div class="photographe">
         
             <img class="photo" src="images/Capture site photographe.png" alt="Site photographe" height="400" onclick="agrandirPhoto(1)">
@@ -148,7 +148,7 @@
             <img class="photo" src="images/morpion.png" alt="Jeu du Morpion" height="400" onclick="agrandirPhoto(5)">
             <p><br>Jeu : Tic-tac-toe  <br> HTML5, CSS3 et JavaScript</p>
         </div>
-    </div>
+    </section>
 
 
 <!-- Contact -->
@@ -158,27 +158,27 @@
         
     </div>
 
-    <div class="contact">
+    <section class="contact">
         <div class="tablecontact">
             <div class="monnom">
-                <img src="images/nom.png" alt="Nom" height="30">
-                <h1>Cyril Pholoppe</h1>
+                <img src="images/nom.png" alt="Nom" height="50">
+                <h1 class="cyril">Cyril Pholoppe</h1>
             </div>
             <div class="monadresse">
-                <img src="images/adresse.png" alt="Adresse" height="30"></td>
-                <h3>3, square des Hirondelles <br> 45770 Saran</h3>
+                <img src="images/adresse.png" alt="Adresse" height="50"></td>
+                <h3 class="adresse">3, square des Hirondelles <br> 45770 Saran</h3>
             </div>
             <div class="montelephone">
-                <img src="images/mobile.png" alt="Téléphone" height="30">
-                <h3>06 61 41 87 19</h3>
+                <img src="images/mobile.png" alt="Téléphone" height="50">
+                <h3 class="numeros">06 61 41 87 19</h3>
             </div>
             <div class="monmail">
-                <img src="images/mail.png" alt="Email" height="30">
+                <img src="images/mail.png" alt="Email" height="40">
                 <a class="gmail" href="cyril.pholoppe@gmail.com"><h4>cyril.pholoppe@gmail.com</h4></a>
             </div>
             <div class="mesreseaux">
-                <a class="linkedin" href="https://www.linkedin.com/in/cyril-pholoppe-735383159/" target="_blank"><img    src="images/linkedin.png" alt="Linkedin" height="40"></a>
-                <a href="https://github.com/Saisai-31" target="_blank"><img src="images/github.png" alt="GitHub" height="40"></a>
+                <a class="linkedin" href="https://www.linkedin.com/in/cyril-pholoppe-735383159/" target="_blank"><img    src="images/linkedin.png" alt="Linkedin" height="50"></a>
+                <a href="https://github.com/Saisai-31" target="_blank"><img src="images/github.png" alt="GitHub" height="50"></a>
             </div>
         </div>
         <div class="formulaire">
@@ -201,7 +201,10 @@
                 </div>
             </form> 
         </div>  
-    </div>
+    </section>
+
+
+<!-- Connexion du formulaire avec ma base de donnée -->
     
 <?php
 

@@ -315,14 +315,6 @@ header{
   margin-bottom: 150px;
 }
 
-.contact{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
 .imgcontact{
   text-align: center;
   margin-bottom: 50px;
@@ -330,32 +322,82 @@ header{
 
 .tablecontact{
   margin: auto;
+  margin-top: 20px;
   padding: 10px;
-  width: 700px;
+  width: 450px;
   border: 5px outset;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 50px;
 }
 .tablecontact div{
   display: flex;
+  flex-direction: row;
   gap: 20px;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
+.monnom{
+  display: flex;
+  align-items: center;
+  padding-bottom: 1px;
+}
+.cyril{
+  margin-bottom: 0;
+}
 
+.monadresse .adresse {
+  visibility: hidden; /* Cache le numéro de téléphone par défaut */
+  opacity: 0; /* Cache également le numéro de téléphone */
+  transition: opacity 0.3s ease; /* Ajoute une transition pour une apparition en douceur */
+}
+.adresse{
+  text-align: center;
+  margin-bottom: 0;
+}
+.monadresse:hover .adresse {
+  visibility: visible; /* Rend le numéro de téléphone visible au survol */
+  opacity: 1; /* Rend le numéro de téléphone complètement visible */
+}
+.monadresse{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 
+.montelephone .numeros {
+  visibility: hidden; /* Cache le numéro de téléphone par défaut */
+  opacity: 0; /* Cache également le numéro de téléphone */
+  transition: opacity 0.3s ease; /* Ajoute une transition pour une apparition en douceur */
+}
+.montelephone:hover .numeros {
+  visibility: visible; /* Rend le numéro de téléphone visible au survol */
+  opacity: 1; /* Rend le numéro de téléphone complètement visible */
+}
+.montelephone{
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 10px;
+}
+.numeros{
+  margin-bottom: 0;
+}
+
+.monmail{
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
 .gmail{
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 
 .mesreseaux{
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   
 }
 .mesreseaux a:hover{
@@ -370,6 +412,7 @@ header{
   width: 700px;
   margin: auto;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .formulaire form{
@@ -449,13 +492,15 @@ input, textarea{
     .cv{
       margin-bottom: 50px;
     }
+    .formulaire{
+      width: 450px;
+    }
   }
 
   @media screen and (max-width:600px) {   
     .photographe img{
       width: 400px;
     }
-    
   }
 
 
