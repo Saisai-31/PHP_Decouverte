@@ -412,7 +412,7 @@ header{
   width: 700px;
   margin: auto;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .formulaire form{
@@ -454,8 +454,15 @@ input, textarea{
 .annuler:hover{
   box-shadow:5px 5px 5px rgba(0,0,0,0.5);
 }
-.echo{
+.reponse{
+  margin: auto;
   text-align: center;
+  font-size: medium;
+  font-style: italic;
+  font-weight: bold;
+  background-color: bisque;
+  border-radius: 10px;
+  width: 400px;
 }
 
 

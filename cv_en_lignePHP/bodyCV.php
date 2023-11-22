@@ -190,8 +190,8 @@
                     <label>Monsieur</label><input type="radio" name="salutation" value="Monsieur">
                 </div>
                 
-                <input type="text" placeholder="Nom et Prénom"  name="nom" class="nom">
-                <input type="email" placeholder="email@email.com"  name="email" class="email">
+                <input type="text" placeholder="Nom et Prénom"  name="nom" class="nom" required>
+                <input type="email" placeholder="email@email.com"  name="email" class="email" required>
                 <input type="tel" placeholder="Téléphone" name="telephone" class="telephone">
                 <input type="text"placeholder="Objet" name="objet" class="objet">
                 <textarea name="message" id="" cols="30" rows="10" placeholder="Votre message" class="texte"></textarea>
@@ -231,13 +231,12 @@
             $maRequete = "select id_contact from contact where email like '$email';";
             $result = $db->query($maRequete);
             if($r = mysqli_fetch_array($result)){
-                echo 'Résultat de la recherche : ' .$r['id_contact'].'<br>';
+                // echo 'Résultat de la recherche : ' .$r['id_contact'].'<br>';
                 return true;
             }else{
                 return false;
             }
         }
-       
         // si l'email est vide : 
         return false;
     }
@@ -273,18 +272,17 @@
         
         //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
         if(checkMail($email, $con)){
-            echo "Cet email existe déjà";
+            echo "<p class='reponse'>Cet email existe déjà</p>";
         }else{
              //Je créé ma reqête d'insertion SQL
             $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom', '$email', '$telephone', '$objet', '$message')";
             $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
-            echo "Vos informations ont bien été enregistrées";
+            echo "<p class='reponse'>Vos informations ont bien été enregistrées</p>";
         }
 
         //Je ferme la connexion
         mysqli_close($con);
     }
-
 ?>
            
 </main>
