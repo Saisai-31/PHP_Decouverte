@@ -284,6 +284,17 @@ legend{
     font-size: larger;
 }
 
+.reponse{
+    margin: auto;
+    text-align: center;
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #FFE4C4;
+    border-radius: 10px;
+    width: 400px;
+    margin-top: 10px;
+  }
 /*Ajout des Média Querries pour différents formats de smartphones et tablettes*/
 @media screen and (max-width:800px) {
     body{

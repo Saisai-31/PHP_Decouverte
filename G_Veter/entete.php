@@ -28,7 +28,7 @@
                     </li>
                 <li class="deroulant"><a href="index.tarifs.php">Tarifs</a></li>
                 <li class="deroulant"><a href="indexUrgence.php">Urgence</a></li>
-                <li class="deroulant"><a href="indexContact.php">Contact</a></li>
+                <li class="deroulant"><a href="indexContact.php">Prendre un RDV</a></li>
             </ul>
         </nav>
     </div>
