@@ -39,8 +39,8 @@ main{
 
 /*Effet Fondu entre section*/
 section {
-  opacity: 0;
-  transition: opacity 1.5s ease;  /* Ajoute une transition d'opacité pour un effet fondu */
+  /* opacity: 0; Me fais un petit bug*/
+  transition: opacity 1.3s ease;  /* Ajoute une transition d'opacité pour un effet fondu */
 }
 
 h1{
@@ -66,7 +66,7 @@ footer{
 
 header{
   position: fixed;
-
+  
   width: 100%;
 }
 
@@ -74,6 +74,7 @@ header{
   background-color: rgb(125,78,166) !important;
   display: flex !important;
   align-items: end !important;
+  opacity: 2;
 }
 
 .container-fluid{
@@ -81,10 +82,12 @@ header{
   display: flex !important;
   align-items: end !important;
   padding-left: 50px;
+  opacity: 2;
 }
 
 .nav-item{
   padding-left: 50px;
+  opacity: 2;
 }
 
 .active{
@@ -96,17 +99,22 @@ header{
 
 .navbar-brand{
   padding: 5px;
+  opacity: 2;
 }
 .navbar-brand:hover{
   background-color: black;
-  border-radius: 5px;
- 
+  border-radius: 10px;
 }
 
 .active:hover{
   background-color: black;
+  border-radius: 10px ;
+}
+
+/* Style pour le lien mis en surbrillance par javascrip dans le menu lors du défilement de la page */
+.navbar-nav .nav-link.highlight {
+  background-color: black !important; 
   border-radius: 10px;
-  
 }
 
 /*Accueil*/
@@ -198,6 +206,7 @@ header{
 .ulicone li{
   text-align: center;
 }
+/*Rotation 360 degrés*/
 .rotate-icone{
   transition: transform 1s ease; /* Ajoute une transition fluide à l'effet de rotation */
 }
@@ -399,7 +408,6 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   text-align: center;
   margin-bottom: 50px;
 }
-
 .tablecontact{
   margin: auto;
   margin-top: 20px;
@@ -421,9 +429,6 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   display: flex;
   align-items: center;
   padding-bottom: 1px;
-}
-.cyril{
-  margin-bottom: 0;
 }
 
 .monadresse .adresse {
@@ -462,7 +467,6 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
 .numeros{
   margin-bottom: 0;
 }
-
 .monmail{
   display: flex;
   margin-left: 5px;
@@ -473,12 +477,10 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   color: black;
   text-align: center;
 }
-
 .mesreseaux{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
 }
 .mesreseaux a:hover{
   transform: scale(1.2);
@@ -494,10 +496,9 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   text-align: center;
   margin-bottom: 20px;
 }
-
 .formulaire form{
   border: 5px outset;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
   border-radius: 20px;
   display: flex;
   flex-direction: column;

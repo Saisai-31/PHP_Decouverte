@@ -35,16 +35,13 @@
         <div class="imgpresentation">
             <a href="#presentation"><img src="images/presentation.png" alt="Presentation" height="100"></a>
         </div>
-
         <div class="jemepresente">
         <p>
-            <h1>Je suis Cyril Pholoppe</h1> 
-            Un professionnel polyvalent ayant évolué dans des domaines aussi divers que la vente, la gestion d'entreprise, le travail en usine et même les services de ménage. Cette expérience hétéroclite m'a apporté une grande capacité d'adaptation, une autonomie affirmée et une aptitude à travailler efficacement en équipe.
+            <h1>Cyril Pholoppe</h1> 
+            Je suis professionnel polyvalent ayant évolué dans des domaines aussi divers que la vente, la gestion d'entreprise, le travail en usine et même les services de ménage. Cette expérience hétéroclite m'a apporté une grande capacité d'adaptation, une autonomie affirmée et une aptitude à travailler efficacement en équipe.
         </p>
         
         <h2>Parcours Professionnel</h2>
-        
-
         <p>
             Commercial et Gérant d'Entreprise - Ayant occupé des postes de commercial et de gérant d'entreprise, j'ai acquis des compétences solides en matière de communication, de négociation et de gestion d'équipe. Ces expériences m'ont également permis de développer un sens aigu du service client. 
         </p>
@@ -56,7 +53,6 @@
         </p>
         
             <h2>Reconversion Professionnelle</h2> 
-        
         <p>
                 Actuellement, je suis en reconversion professionnelle avec un focus particulier sur le monde du développement web et web mobile. Je suis en cours d'obtention du titre professionnel de Développeur Web et Web Mobile, ce qui me permet d'acquérir des compétences techniques pointues pour répondre aux défis du monde numérique.
         </p>
@@ -126,28 +122,23 @@
         <div class="imgportfolio">
             <a href="#portfolio"><img src="images/portfolio.png" alt="Portfolio" height="100"></a>
         </div>
-        <div class="portfolio">
-            
+        <div class="portfolio">  
             <div class="photographe" onclick="agrandirPhoto(this, 'images/Capture site photographe.png', 'Site responsive d\'une photographe avec HTML5 et CSS3')">
                 <img class="photo" src="images/Capture site photographe.png" alt="Site photographe" height="400">
                 <p><br>Site responsive d'une photographe <br> HTML5 et CSS3</p>
             </div>
-
             <div class="photographe" onclick="agrandirPhoto(this, 'images/Gveter.png', 'Site dynamique et responsive d\'un vétérinaire en HTML5, CSS3, PHP et MySQL')">
                 <img class="photo" src="images/Gveter.png" alt="Site vétérinaire" height="400">
                 <p><br>Site dynamique et responsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL</p>
             </div>
-
             <div class="photographe" onclick="agrandirPhoto(this, 'images/CaptureFormulaireFlexbox.png', 'Formulaire Flexbox HTML5 et CSS3')">
                 <img class="photo" src="images/CaptureFormulaireFlexbox.png" alt="Formulaire Flexbox" height="400">
                 <p><br>Formulaire Flexbox <br> HTML5 et CSS3</p>
             </div>
-
             <div class="photographe" onclick="agrandirPhoto(this, 'images/chonometre.png', 'Chronomètre avec HTML5, CSS3 et JavaScript')">
                 <img class="photo" src="images/chonometre.png" alt="Chronomètre" height="400">
                 <p><br>Chronomètre <br> HTML5, CSS3 et JavaScript</p>
             </div>
-
             <div class="photographe" onclick="agrandirPhoto(this, 'images/morpion.png', 'Jeu : Tic-tac-toe avec HTML5, CSS3 et JavaScript')">
                 <img class="photo" src="images/morpion.png" alt="Jeu du Morpion" height="400">
                 <p><br>Jeu : Tic-tac-toe <br> HTML5, CSS3 et JavaScript</p>
@@ -191,8 +182,7 @@
                     <div>
                         <label>Madame</label><input type="radio" name="salutation" checked class="madame" value="Madame">
                         <label>Monsieur</label><input type="radio" name="salutation" value="Monsieur">
-                    </div>
-                    
+                    </div>   
                     <input type="text" placeholder="Nom et Prénom"  name="nom" class="nom" required>
                     <input type="email" placeholder="email@email.com"  name="email" class="email" required>
                     <input type="tel" placeholder="Téléphone" name="telephone" class="telephone">
@@ -210,83 +200,83 @@
 
 <!-- Connexion du formulaire avec ma base de donnée -->
     
-<?php
+    <?php
 
-    // FONCTIONS UTILITAIRES
-    function connectDb(){
-        // Connexion à la base de données
-        $connexion = mysqli_connect("localhost", "root", "", "contact_cv");
+        // FONCTIONS UTILITAIRES
+        function connectDb(){
+            // Connexion à la base de données
+            $connexion = mysqli_connect("localhost", "root", "", "contact_cv");
 
-        //Je teste que la connexion s'est bien effectué. Dans le cas contraire je recois un message d'erreur.
-        if(mysqli_connect_errno()){
-            echo "erreur de connexion à la base ".mysqli_connect_error();
-            exit();
-        }
-        return $connexion;
-    }
-
-
-    //Retourne true si l'email en paramètre existe dans la base de données
-    // Sinon retourne false si l'email en paramètre n'existe pas dans la base de donnée
-    function checkMail($email, $db){
-        // verifier que l email soit rempli
-        if($email !== ""){
-        // verifier que l'email n'existe pas dans la BDD:
-            $maRequete = "select id_contact from contact where email like '$email';";
-            $result = $db->query($maRequete);
-            if($r = mysqli_fetch_array($result)){
-                // echo 'Résultat de la recherche : ' .$r['id_contact'].'<br>';
-                return true;
-            }else{
-                return false;
+            //Je teste que la connexion s'est bien effectué. Dans le cas contraire je recois un message d'erreur.
+            if(mysqli_connect_errno()){
+                echo "erreur de connexion à la base ".mysqli_connect_error();
+                exit();
             }
+            return $connexion;
         }
-        // si l'email est vide : 
-        return false;
-    }
 
-    //Pratique pour utiliser et lire les var_dump
-    // echo "<pre>".var_dump($_POST)."</pre>";
-    
-    //trim enlève les espaces à la fin du champs.
-    //Avec isset je vérifie que $_POST existe et que les clés (salutaion, nom, email, ...) existent égalemant 
-    //Je vérifie également que les clés (salutation, nom ...) sont bien présentes.
-    //A la fin je vérifie que les clées nom et email ne sont pas vide.
-    if(
-        isset($_POST) &&
-        isset($_POST['salutation'], $_POST['nom'], $_POST['email'], $_POST['telephone'], $_POST['objet'], $_POST['message']) && 
-        trim($_POST['nom']) !== "" && 
-        trim($_POST['email']) !== ""
-    ){
-        //J'appel ma fonction pour me connecter à la BDD
-        $con = connectDb();
-                
-        //Création des variables pour récupérer les données de mes champs du formulaire
-    
-        //addslashes https://www.php.net/manual/fr/function.addslashes.php
-        //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
-        //contre les injections SQL
-        $salutation = addslashes($_POST['salutation']);
-        $nomPrenom = addslashes($_POST['nom']);
-        $email = addslashes($_POST['email']);
-        $telephone = addslashes($_POST['telephone']);
-        $objet = addslashes($_POST['objet']);
-        $message = addslashes($_POST['message']);
 
+        //Retourne true si l'email en paramètre existe dans la base de données
+        // Sinon retourne false si l'email en paramètre n'existe pas dans la base de donnée
+        function checkMail($email, $db){
+            // verifier que l email soit rempli
+            if($email !== ""){
+            // verifier que l'email n'existe pas dans la BDD:
+                $maRequete = "select id_contact from contact where email like '$email';";
+                $result = $db->query($maRequete);
+                if($r = mysqli_fetch_array($result)){
+                    // echo 'Résultat de la recherche : ' .$r['id_contact'].'<br>';
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            // si l'email est vide : 
+            return false;
+        }
+
+        //Pratique pour utiliser et lire les var_dump
+        // echo "<pre>".var_dump($_POST)."</pre>";
         
-        //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
-        if(checkMail($email, $con)){
-            echo "<p class='reponse'>Cet email existe déjà</p>";
-        }else{
-             //Je créé ma reqête d'insertion SQL
-            $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom', '$email', '$telephone', '$objet', '$message')";
-            $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
-            echo "<p class='reponse'>Vos informations ont bien été enregistrées</p>";
-        }
+        //trim enlève les espaces à la fin du champs.
+        //Avec isset je vérifie que $_POST existe et que les clés (salutaion, nom, email, ...) existent égalemant 
+        //Je vérifie également que les clés (salutation, nom ...) sont bien présentes.
+        //A la fin je vérifie que les clées nom et email ne sont pas vide.
+        if(
+            isset($_POST) &&
+            isset($_POST['salutation'], $_POST['nom'], $_POST['email'], $_POST['telephone'], $_POST['objet'], $_POST['message']) && 
+            trim($_POST['nom']) !== "" && 
+            trim($_POST['email']) !== ""
+        ){
+            //J'appel ma fonction pour me connecter à la BDD
+            $con = connectDb();
+                    
+            //Création des variables pour récupérer les données de mes champs du formulaire
+        
+            //addslashes https://www.php.net/manual/fr/function.addslashes.php
+            //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
+            //contre les injections SQL
+            $salutation = addslashes($_POST['salutation']);
+            $nomPrenom = addslashes($_POST['nom']);
+            $email = addslashes($_POST['email']);
+            $telephone = addslashes($_POST['telephone']);
+            $objet = addslashes($_POST['objet']);
+            $message = addslashes($_POST['message']);
 
-        //Je ferme la connexion
-        mysqli_close($con);
-    }
-?>
+            
+            //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
+            if(checkMail($email, $con)){
+                echo "<p class='reponse'>Cet email existe déjà</p>";
+            }else{
+                //Je créé ma reqête d'insertion SQL
+                $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom', '$email', '$telephone', '$objet', '$message')";
+                $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
+                echo "<p class='reponse'>Vos informations ont bien été enregistrées</p>";
+            }
+
+            //Je ferme la connexion
+            mysqli_close($con);
+        }
+    ?>
            
 </main>
