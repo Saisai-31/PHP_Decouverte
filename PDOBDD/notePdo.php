@@ -98,6 +98,11 @@ Pour exécuter cette requête nous récupérons l'objet PDO et nous effectuons u
     print_($donnees);
     echo '</pre>';
  }
+ /*
+On obtient chaque ligne de notre table clients, rangée dans un tableau (array) et chaque tableau (array) contient : 
+- un tableau associatif
+- un tableau numérique
+ */
 
 
 ?>
