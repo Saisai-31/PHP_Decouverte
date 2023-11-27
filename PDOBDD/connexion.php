@@ -12,8 +12,8 @@
 
     $sql = "select * from clients";
     $rs_req = $cnx->query($sql);
-    while($donnees = $rs_req -> fetch()){
-        echo '<pre>';
+    while($donnees = $rs_req -> fetch(PDO::FETCH_ASSOC)){ //PDO::FETCH_NUM affiche un tableau en numérique, à indice et 
+        echo '<pre>';                                    //PDO::FETCH_ASSOC affiche un tableau 'association
         print_r($donnees);
         echo '</pre>';
      }
