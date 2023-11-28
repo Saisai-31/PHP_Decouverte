@@ -6,7 +6,8 @@
 
 body, html {
   height: 100vh;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* une transition fluide entre la position actuelle et la position de la cible dans la page.*/
+
 }
 
 a{
@@ -35,6 +36,7 @@ main{
     flex-grow:1;
     padding-top: 100px;
     margin: 20px;
+    
 }
 
 /*Effet Fondu entre section*/
@@ -52,10 +54,8 @@ h1{
 footer{
    background-color: rgb(125,78,166);
     color: white;
-    padding: 10px;
     font-size: 20px;
-    margin-bottom: 0vh;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@ footer{
 
 header{
   position: fixed;
-  
+  z-index: 2;
   width: 100%;
 }
 
@@ -74,7 +74,7 @@ header{
   background-color: rgb(125,78,166) !important;
   display: flex !important;
   align-items: end !important;
-  opacity: 2;
+ 
 }
 
 .container-fluid{
@@ -124,6 +124,7 @@ header{
   align-items: center;
   flex-wrap: wrap;
   margin-top: 50px;
+  z-index: 1;
 }
 
 .divphoto{
@@ -368,12 +369,6 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-
-
-
 .photographe{
   text-align: center;
   background-color: rgb(212, 212, 212, 0.6);
@@ -476,6 +471,7 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   text-decoration: none;
   color: black;
   text-align: center;
+  font-size: 1.5em;
 }
 .mesreseaux{
   display: flex;
@@ -583,6 +579,8 @@ input, textarea{
     .formulaire{
       width: 450px;
     }
+    
+
   }
 
   @media screen and (max-width:600px) {   
@@ -590,11 +588,15 @@ input, textarea{
       width: 400px;
     }
     .formulaire{
-      width: 400px;
+      width: 300px;
     }
     .tablecontact{
-      width: 400px;
+      width: 300px;
     }
+    .gmail{
+     font-size: 1em;
+    }
+  
   }
 
 

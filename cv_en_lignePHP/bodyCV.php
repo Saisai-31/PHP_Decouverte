@@ -2,7 +2,7 @@
 <!-- Accueil -->
     <section id="accueil">
         <div class="divphoto animate-left">
-            <img src="images/cyril.jpg" alt="Ma photo" height="300" class="maphoto">
+            <img src="images/Cyril.jpg" alt="Ma photo" height="300" class="maphoto">
             <a class="cv" href="images/Cv_Cyril_Pholoppe.pdf"  target="_blank">Télécharger mon CV</a>
         </div> 
         <div class="presentation animate-right">
@@ -123,8 +123,8 @@
             <a href="#portfolio"><img src="images/portfolio.png" alt="Portfolio" height="100"></a>
         </div>
         <div class="portfolio">  
-            <div class="photographe" onclick="agrandirPhoto(this, 'images/Capture site photographe.png', 'Site responsive d\'une photographe avec HTML5 et CSS3')">
-                <img class="photo" src="images/Capture site photographe.png" alt="Site photographe" height="400">
+            <div class="photographe" onclick="agrandirPhoto(this, 'images/captureSitePhotographe.png', 'Site responsive d\'une photographe avec HTML5 et CSS3')">
+                <img class="photo" src="images/captureSitePhotographe.png" alt="Site photographe" height="400">
                 <p><br>Site responsive d'une photographe <br> HTML5 et CSS3</p>
             </div>
             <div class="photographe" onclick="agrandirPhoto(this, 'images/Gveter.png', 'Site dynamique et responsive d\'un vétérinaire en HTML5, CSS3, PHP et MySQL')">
@@ -169,7 +169,7 @@
                 </div>
                 <div class="monmail">
                     <img src="images/mail.png" alt="Email" height="40">
-                    <a class="gmail" href="cyril.pholoppe@gmail.com"><h4>cyril.pholoppe@gmail.com</h4></a>
+                    <a class="gmail" href="cyril.pholoppe@gmail.com">cyril.pholoppe@gmail.com</a>
                 </div>
                 <div class="mesreseaux">
                     <a class="linkedin" href="https://www.linkedin.com/in/cyril-pholoppe-735383159/" target="_blank"><img    src="images/linkedin.png" alt="Linkedin" height="50"></a>
@@ -178,7 +178,7 @@
             </div>
             <div class="formulaire">
                 <form action="" method="post">
-                    <legend><h2>Contactez moi</h2></legend>
+                    <legend><h2><b>Contactez moi</b></h2></legend>
                     <div>
                         <label>Madame</label><input type="radio" name="salutation" checked class="madame" value="Madame">
                         <label>Monsieur</label><input type="radio" name="salutation" value="Monsieur">
