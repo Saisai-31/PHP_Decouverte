@@ -40,17 +40,8 @@
                         <li><a class="dropdown-item" href="rechercher.php">Rechercher dans une BDD</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Les TP
-                </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./TP_PHP_date_1/indexDate.php">TP 1</a></li>
-                        <li><a class="dropdown-item" href="#">TP 2</a></li>
-                        <li><a class="dropdown-item" href="#">TP 3</a></li>
-                        <li><a class="dropdown-item" href="#">TP 4</a></li>
-                        <li><a class="dropdown-item" href="tp_php_5-Index.php">TP 10</a></li>
-                    </ul>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="securite.php">Sécurité</a>
                 </li>
             </ul>
             <!-- <form class="d-flex" role="search">
@@ -60,7 +51,7 @@
             </div>
         </div>
     </nav>
-        
+    
 </header> 
 
 

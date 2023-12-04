@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  // Appeler la fonction au chargement initial et au scroll
-  fadeInSections();
-  window.addEventListener('scroll', fadeInSections);
+// Appeler la fonction au chargement initial et au scroll
+fadeInSections();
+window.addEventListener('scroll', fadeInSections);
 });
 
 
