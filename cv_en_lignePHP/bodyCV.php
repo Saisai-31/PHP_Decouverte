@@ -84,6 +84,7 @@
                     <li>Markdown</li>
                     <li>Bootstrap (Framework)</li>
                     <li>JavaScript</li>
+                    <li>jQuery</li>
                     <li>PHP</li>
                     <li>SQL</li>      
                 </ul>
@@ -94,7 +95,7 @@
                     <li>Git</li>
                     <li>MySQL</li>
                     <li>Workbench</li>
-                    <li>Wampp</li>
+                    <li>Wamp</li>
                     <li>Xampp</li>
                     <li>Figma</li>
                     <li>Pencil</li>
@@ -177,7 +178,7 @@
                 </div>
             </div>
             <div class="formulaire">
-                <form action="" method="post">
+                <form action="" method="post" id="monFormulaire">
                     <legend><h2><b>Contactez moi</b></h2></legend>
                     <div>
                         <label>Madame</label><input type="radio" name="salutation" checked class="madame" value="Madame">
@@ -192,7 +193,8 @@
                         <input type="submit" class="envoyer">
                         <input type="reset" value="Annuler" class="annuler">
                     </div>
-                </form> 
+                </form>
+                <div id="message"></div> 
             </div>  
         </div>
     </section>
@@ -200,83 +202,90 @@
 
 <!-- Connexion du formulaire avec ma base de donnée -->
     
-    <?php
+<?php
 
-        // FONCTIONS UTILITAIRES
-        function connectDb(){
-            // Connexion à la base de données
-            $connexion = mysqli_connect("localhost", "root", "", "contact_cv");
+// FONCTIONS UTILITAIRES
+function connectDb(){
+    // Connexion à la base de données
+    $connexion = mysqli_connect("localhost", "root", "", "contact_cv");
 
-            //Je teste que la connexion s'est bien effectué. Dans le cas contraire je recois un message d'erreur.
-            if(mysqli_connect_errno()){
-                echo "erreur de connexion à la base ".mysqli_connect_error();
-                exit();
-            }
-            return $connexion;
-        }
+    //Je teste que la connexion s'est bien effectué. Dans le cas contraire je recois un message d'erreur.
+    if(mysqli_connect_errno()){
+        echo "erreur de connexion à la base ".mysqli_connect_error();
+        exit();
+    }
+    return $connexion;
+}
 
 
-        //Retourne true si l'email en paramètre existe dans la base de données
-        // Sinon retourne false si l'email en paramètre n'existe pas dans la base de donnée
-        function checkMail($email, $db){
-            // verifier que l email soit rempli
-            if($email !== ""){
-            // verifier que l'email n'existe pas dans la BDD:
-                $maRequete = "select id_contact from contact where email like '$email';";
-                $result = $db->query($maRequete);
-                if($r = mysqli_fetch_array($result)){
-                    // echo 'Résultat de la recherche : ' .$r['id_contact'].'<br>';
-                    return true;
-                }else{
-                    return false;
-                }
-            }
-            // si l'email est vide : 
+//Retourne true si l'email en paramètre existe dans la base de données
+// Sinon retourne false si l'email en paramètre n'existe pas dans la base de donnée
+function checkMail($email, $db){
+    // verifier que l email soit rempli
+    if($email !== ""){
+    // verifier que l'email n'existe pas dans la BDD:
+        $maRequete = "select id_contact from contact where email like '$email';";
+        $result = $db->query($maRequete);
+        if($r = mysqli_fetch_array($result)){
+            // echo 'Résultat de la recherche : ' .$r['id_contact'].'<br>';
+            return true;
+        }else{
             return false;
         }
+    }
+    // si l'email est vide : 
+    return false;
+}
 
-        //Pratique pour utiliser et lire les var_dump
-        // echo "<pre>".var_dump($_POST)."</pre>";
-        
-        //trim enlève les espaces à la fin du champs.
-        //Avec isset je vérifie que $_POST existe et que les clés (salutaion, nom, email, ...) existent égalemant 
-        //Je vérifie également que les clés (salutation, nom ...) sont bien présentes.
-        //A la fin je vérifie que les clées nom et email ne sont pas vide.
-        if(
-            isset($_POST) &&
-            isset($_POST['salutation'], $_POST['nom'], $_POST['email'], $_POST['telephone'], $_POST['objet'], $_POST['message']) && 
-            trim($_POST['nom']) !== "" && 
-            trim($_POST['email']) !== ""
-        ){
-            //J'appel ma fonction pour me connecter à la BDD
-            $con = connectDb();
-                    
-            //Création des variables pour récupérer les données de mes champs du formulaire
-        
-            //addslashes https://www.php.net/manual/fr/function.addslashes.php
-            //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
-            //contre les injections SQL
-            $salutation = addslashes($_POST['salutation']);
-            $nomPrenom = addslashes($_POST['nom']);
-            $email = addslashes($_POST['email']);
-            $telephone = addslashes($_POST['telephone']);
-            $objet = addslashes($_POST['objet']);
-            $message = addslashes($_POST['message']);
+//Pratique pour utiliser et lire les var_dump
+// echo "<pre>".var_dump($_POST)."</pre>";
 
+//trim enlève les espaces à la fin du champs.
+//Avec isset je vérifie que $_POST existe et que les clés (salutaion, nom, email, ...) existent égalemant 
+//Je vérifie également que les clés (salutation, nom ...) sont bien présentes.
+//A la fin je vérifie que les clées nom et email ne sont pas vide.
+if(
+    isset($_POST) &&
+    isset($_POST['salutation'], $_POST['nom'], $_POST['email'], $_POST['telephone'], $_POST['objet'], $_POST['message']) && 
+    trim($_POST['nom']) !== "" && 
+    trim($_POST['email']) !== ""
+){
+    //J'appel ma fonction pour me connecter à la BDD
+    $con = connectDb();
             
-            //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
-            if(checkMail($email, $con)){
-                echo "<p class='reponse'>Cet email existe déjà</p>";
-            }else{
-                //Je créé ma reqête d'insertion SQL
-                $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom', '$email', '$telephone', '$objet', '$message')";
-                $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
-                echo "<p class='reponse'>Vos informations ont bien été enregistrées</p>";
-            }
+    //Création des variables pour récupérer les données de mes champs du formulaire
 
-            //Je ferme la connexion
-            mysqli_close($con);
-        }
-    ?>
+    //addslashes https://www.php.net/manual/fr/function.addslashes.php
+    //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
+    //contre les injections SQL
+    $salutation = addslashes($_POST['salutation']);
+    $nomPrenom = addslashes($_POST['nom']);
+    $email = addslashes($_POST['email']);
+    $telephone = addslashes($_POST['telephone']);
+    $objet = addslashes($_POST['objet']);
+    $message = addslashes($_POST['message']);
+
+    
+    //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
+    if(checkMail($email, $con)){
+        echo "<p class='reponse'>Cet email existe déjà</p>";
+    }else{
+        //Je créé ma reqête d'insertion SQL
+        $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom',                        '$email', '$telephone', '$objet', '$message')";
+        $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
+        echo "<p class='reponse'>Vos informations ont bien été enregistrées</p>";
+    }
+
+    //Je ferme la connexion
+    mysqli_close($con);
+}
+?>
+
+
+   
+</main>
+
+    
+   
            
 </main>

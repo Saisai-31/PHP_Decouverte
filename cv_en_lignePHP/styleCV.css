@@ -596,9 +596,20 @@ input, textarea{
     .gmail{
      font-size: 1em;
     }
+    h1{
+      font-size: 1em;
+    }
   
   }
-
+  @media screen and (max-width:320px) {   
+    .presentation{
+      width: 320px;
+    }
+    h1{
+      font-size: 1em;
+    }
+    
+  }
 
 
   
