@@ -13,7 +13,6 @@
     <!-- 
     Une des vulnérabilités le plus courament identifiées lors des audits en test d'intrusion d'application web est l'injection de code indirect à distance ou Cross Scripting ou XXS.
     Cette vulnérabilité est aussi présente dans le top 10 des risques les plus critiques pour la sécurité des applications web de l'Open Web Application Security Projet (OWASP).
-
     -->
 
     <?php
@@ -26,6 +25,7 @@
         echo "Le prénom est obligatoire";
         exit();
     }
+    //FILTER_VALIDATE_EMAIL : C'est une constante prédéfinie dans PHP qui représente un filtre pour valider une adresse e-mail. Lorsque cette constante est utilisée avec filter_var(), elle vérifie si la variable correspond au format d'une adresse e-mail valide.
     if(!isset($_POST['email']) || empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         echo "L'email' est obligatoire";
         exit();

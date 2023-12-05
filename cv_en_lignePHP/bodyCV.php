@@ -258,11 +258,11 @@ if(
     //addslashes https://www.php.net/manual/fr/function.addslashes.php
     //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
     //contre les injections SQL
-    $salutation = addslashes($_POST['salutation']);
-    $nomPrenom = addslashes($_POST['nom']);
-    $email = addslashes($_POST['email']);
-    $telephone = addslashes($_POST['telephone']);
-    $objet = addslashes($_POST['objet']);
+    $salutation = htmlspecialchars($_POST['salutation']);
+    $nomPrenom = htmlspecialcharss($_POST['nom']);
+    $email = htmlspecialchars($_POST['email']);
+    $telephone = htmlspecialchars($_POST['telephone']);
+    $objet = htmlspecialchars($_POST['objet']);
     $message = addslashes($_POST['message']);
 
     

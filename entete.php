@@ -51,7 +51,7 @@
             </div>
         </div>
     </nav>
-    UPDATE utilisateurs SET motdepassee = SHA1(motdepasse);
+   
 </header> 
 
 

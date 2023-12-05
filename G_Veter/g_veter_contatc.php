@@ -54,12 +54,12 @@ if(
     //addslashes https://www.php.net/manual/fr/function.addslashes.php
     //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
     //contre les injections SQL
-    $nom = addslashes($_POST['nom']);
-    $animal = addslashes($_POST['animal']);
-    $telephone = addslashes($_POST['telephone']);
-    $email = addslashes($_POST['email']);
-    $message = addslashes($_POST['message']);
-    $date_heure = addslashes($_POST['date_heure']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $animal = htmlspecialchars($_POST['animal']);
+    $telephone = htmlspecialchars($_POST['telephone']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+    $date_heure = htmlspecialchars($_POST['date_heure']);
 
         //Je créé ma reqête d'insertion SQL
         $sql = "insert into rdv (id, nom, animal, telephone, email, message, date_heure) values('', '$nom', '$animal', '$telephone', '$email', '$message', '$date_heure')";
