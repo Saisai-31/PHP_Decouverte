@@ -28,21 +28,21 @@
 <?php
     //Connexion à la BDD de Laïd
 
-    $conx = "DWWM-16";
-    $user = "toto";
-    $pwd = "tata";
+    // $conx = "DWWM-16";
+    // $user = "toto";
+    // $pwd = "tata";
 
-    $con = mysqli_connect($conx, $user, $pwd);
-    if(mysqli_connect_errno()){
-        echo "erreur de connexion à la base ".mysqli_connect_error();
-        exit();
-    }else{
-        echo "Bien joué";
-    }
+    // $con = mysqli_connect($conx, $user, $pwd);
+    // if(mysqli_connect_errno()){
+    //     echo "erreur de connexion à la base ".mysqli_connect_error();
+    //     exit();
+    // }else{
+    //     echo "Bien joué";
+    // }
    
 
-        //Ferme la connexion
-        mysqli_close($con);
+    //     //Ferme la connexion
+    //     mysqli_close($con);
 
 
     ?>

@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../styleGrid.css">
-    <title>Sécurité</title>
+    <title>Gstion des images</title>
 </head>
 <body>
 
     <?php
         include_once('../entete.php');
-        include_once('body/bodySecurite.php');
+        include_once('body/bodyImages.php');
+        include_once('body/bodyImages2.php');
+        include_once('body/bodyImages3.php');
+        include_once('body/bodyImages4.php');
+        include_once('body/bodyImages5.php');
         include_once('../footer.php');
     ?>
 

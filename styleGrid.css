@@ -21,6 +21,8 @@ body{
     background: linear-gradient(180deg,royalblue 0%, #0050ff 40%, #009dff 80%);
     background: -webkit-linear-gradient(180deg,royalblue 0%, #0050ff 40%, #009dff 80%);
     background: -moz-linear-gradient(180deg,royalblue 0%, #0050ff 40%, #009dff 80%);;
+  
+    
 }
 
 h1{

@@ -132,9 +132,9 @@
                 <img class="photo" src="images/Gveter.png" alt="Site vétérinaire" height="400">
                 <p><br>Site dynamique et responsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL</p>
             </div>
-            <div class="photographe" onclick="agrandirPhoto(this, 'images/CaptureFormulaireFlexbox.png', 'Formulaire Flexbox HTML5 et CSS3')">
-                <img class="photo" src="images/CaptureFormulaireFlexbox.png" alt="Formulaire Flexbox" height="400">
-                <p><br>Formulaire Flexbox <br> HTML5 et CSS3</p>
+            <div class="photographe" onclick="agrandirPhoto(this, 'images/meteoApi.png', 'Dashboard météo avec l\'API openweather en HTML5, CSS3 et JavaScript')">
+                <img class="photo" src="images/meteoApi.png" alt="API Météo" height="400">
+                <p><br>Dashboard météo avec l'API openweather <br> HTML5, CSS3 et JavaScript</p>
             </div>
             <div class="photographe" onclick="agrandirPhoto(this, 'images/chonometre.png', 'Chronomètre avec HTML5, CSS3 et JavaScript')">
                 <img class="photo" src="images/chonometre.png" alt="Chronomètre" height="400">
