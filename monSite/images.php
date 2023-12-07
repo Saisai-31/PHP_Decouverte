@@ -16,6 +16,7 @@
         include_once('body/bodyImages3.php');
         include_once('body/bodyImages4.php');
         include_once('body/bodyImages5.php');
+        include_once('body/bodyImages6.php');
         include_once('../footer.php');
     ?>
 

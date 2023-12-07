@@ -259,7 +259,7 @@ if(
     //permet de nettoyer des caractères spéciaux (', "", ...) et de me protéger 
     //contre les injections SQL
     $salutation = htmlspecialchars($_POST['salutation']);
-    $nomPrenom = htmlspecialcharss($_POST['nom']);
+    $nomPrenom = htmlspecialchars($_POST['nom']);
     $email = htmlspecialchars($_POST['email']);
     $telephone = htmlspecialchars($_POST['telephone']);
     $objet = htmlspecialchars($_POST['objet']);
@@ -268,12 +268,12 @@ if(
     
     //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
     if(checkMail($email, $con)){
-        echo "<p class='reponse'>Cet email existe déjà</p>";
+        echo "Cet email existe déjà";
     }else{
         //Je créé ma reqête d'insertion SQL
         $sql = "insert into contact (id_contact, salutation, nom, email, telephone, objet, message) values('', '$salutation', '$nomPrenom',                        '$email', '$telephone', '$objet', '$message')";
         $result = mysqli_query($con, $sql) or die ("Echec de la requête insert");
-        echo "<p class='reponse'>Vos informations ont bien été enregistrées</p>";
+        echo "Vos informations ont bien été enregistrées";
     }
 
     //Je ferme la connexion
@@ -288,4 +288,4 @@ if(
     
    
            
-</main>
+

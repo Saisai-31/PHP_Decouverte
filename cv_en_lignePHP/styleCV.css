@@ -59,6 +59,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
   }
 
 
@@ -531,7 +532,7 @@ input, textarea{
 .annuler:hover{
   box-shadow:5px 5px 5px rgba(0,0,0,0.5);
 }
-.reponse{
+#message{
   margin: auto;
   text-align: center;
   font-size: medium;
