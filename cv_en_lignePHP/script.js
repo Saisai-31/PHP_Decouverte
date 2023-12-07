@@ -117,6 +117,7 @@ $(document).ready(function() {
 
         
         $.ajax({
+            
             type: "POST",
             url: window.location.pathname, // Chemin vers mmon script PHP
             data: formData,
@@ -124,12 +125,14 @@ $(document).ready(function() {
                 console.log(response);
                 $("#message").html(response);
             },
+            
             error: function(error) {
                 console.error(error);
             }
         });
+        return false;
     });
-    return false;
+    
 });
 
 
