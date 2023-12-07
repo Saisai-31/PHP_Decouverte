@@ -112,6 +112,7 @@ $(document).ready(function(){
 $(document).ready(function() {
     $("#monFormulaire").submit(function(event) {
         event.preventDefault(); // Empêche le rechargement de la page
+        event.stopPropagation(); 
         var formData = $(this).serialize(); // Récupération des données du formulaire
 
         
