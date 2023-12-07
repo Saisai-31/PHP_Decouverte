@@ -31,12 +31,12 @@
         7/ Libération facultative de l'espace mémoire occupé par l'image sur le serveur à l'aide de la fonction imagedestroy().
         */
 
-        //header("image.png");
+        //header("image/png");
 
         //Création du cadre 800x400 pixels
         $id_img = imagecreate(800,400);
-        //Création des couleurs
 
+        //Création des couleurs
         $fond = imagecolorallocate($id_img, 255, 255, 51);
         $noir = imagecolorallocate($id_img, 0, 0, 0);
 
@@ -54,3 +54,8 @@
     ?>
     <img src="imagedwwm.png" alt="">
 </div>
+
+
+
+
+
