@@ -46,6 +46,9 @@
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="images.php">Gestion des images</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="compteur.php">Compteur</a>
+                </li>
             </ul>
             <!-- <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
