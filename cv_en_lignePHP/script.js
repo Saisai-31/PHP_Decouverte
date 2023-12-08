@@ -114,12 +114,13 @@ $(document).ready(function() {
         event.preventDefault(); // Empêche le rechargement de la page
         event.stopPropagation(); 
         var formData = $(this).serialize(); // Récupération des données du formulaire
+        var form_url = $(this).attr("action");
 
         
         $.ajax({
             
             type: "POST",
-            url: window.location.pathname, // Chemin vers mmon script PHP
+            url: form_url, // Chemin vers mon script PHP
             data: formData,
             success: function(response) {
                 console.log(response);
