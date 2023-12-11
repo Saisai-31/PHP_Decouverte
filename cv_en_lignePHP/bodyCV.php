@@ -263,7 +263,7 @@ if(
     $email = htmlspecialchars($_POST['email']);
     $telephone = htmlspecialchars($_POST['telephone']);
     $objet = htmlspecialchars($_POST['objet']);
-    $message = addslashes($_POST['message']);
+    $message = htmlspecialchars($_POST['message']);
 
     
     //J'ajoute la vérification de l'email avant insertion (je ne veux pas de doublons d'emails)
