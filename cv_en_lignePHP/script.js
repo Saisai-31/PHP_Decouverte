@@ -108,7 +108,33 @@ $(document).ready(function(){
 // En résumé, ce code utilise jQuery pour détecter les clics sur le bouton de bascule du menu pour l'ouvrir ou le fermer. De plus, il écoute les clics sur l'ensemble du document et ferme le menu si le clic se produit en dehors du menu lui-même.
 
 
+// Écrire le script jQuery pour envoyer le formulaire en utilisant AJAX
+$(document).ready(function() {
+    $("#monFormulaire").submit(function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+        event.stopPropagation(); 
+        var formData = $(this).serialize(); // Récupération des données du formulaire
+        var form_url = $(this).attr("action");
 
+        
+        $.ajax({
+            
+            type: "POST",
+            url: form_url, // Chemin vers mon script PHP
+            data: formData,
+            success: function(response) {
+                console.log(response);
+                $("#message").html(response);
+            },
+            
+            error: function(error) {
+                console.error(error);
+            }
+        });
+        return false;
+    });
+    
+});
 
 
 
