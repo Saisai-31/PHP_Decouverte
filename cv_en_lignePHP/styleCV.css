@@ -18,7 +18,7 @@ body{
   display: flex;
   flex-direction: column;
   background-image: url(images/fondecran.jpg);
-  font-family: 'Lato', sans-serif;;
+  font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3{
