@@ -1,6 +1,6 @@
 <div class="content">
     <h1>Les API de HTML5</h1>
-    <br><br>
+   
     <!-- 
         Les API de HTML5 sont des interfaces de programmation d'application qui permettent aux développeurs d'accéder aux fonctionnalités du navigateur web à partir de JavaScript. Elles sont conçues pour etre simples à utiliser et permettent de créer des applications web plus riches et interactives. 
 

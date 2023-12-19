@@ -87,7 +87,13 @@ const sections = document.querySelectorAll('section');
 
 //En résumé, ce code utilise le défilement de la page pour détecter quelles sections sont visibles à l'écran et ajoute une classe spécifique (highlight) aux liens du menu correspondants à ces sections pour les mettre en surbrillance.
 
-//Menu buger, réglage du petit bug pour qu'il se referme correctement
+
+
+
+
+//jQuery
+
+// 1 -- Menu buger, réglage du petit bug pour qu'il se referme correctement
 $(document).ready(function(){
     $('.navbar-toggler').click(function(){
         $('#navbarSupportedContent').toggleClass('show');
@@ -108,7 +114,7 @@ $(document).ready(function(){
 // En résumé, ce code utilise jQuery pour détecter les clics sur le bouton de bascule du menu pour l'ouvrir ou le fermer. De plus, il écoute les clics sur l'ensemble du document et ferme le menu si le clic se produit en dehors du menu lui-même.
 
 
-// Écrire le script jQuery pour envoyer le formulaire en utilisant AJAX
+// 2 -- Écrire le script jQuery pour envoyer le formulaire en utilisant AJAX
 $(document).ready(function() {
     $("#monFormulaire").submit(function(event) {
         event.preventDefault(); // Empêche le rechargement de la page
@@ -135,6 +141,64 @@ $(document).ready(function() {
     });
     
 });
+
+
+
+// 3 -- Lire la suite
+
+$(document).ready(function(){
+    var $paragraphe2 = $(".jemepresente p:eq(1)");
+    var $paragraphe3 = $(".jemepresente p:eq(2)");
+    $paragraphe2.hide();
+    $paragraphe3.hide();
+    $("a.suite").on("click", function(event){
+        event.preventDefault(); // Pour pas que ma page se recharge
+        if($paragraphe2.is(":hidden")&& $paragraphe3.is(":hidden")){
+            $paragraphe2.show("slow");
+            $paragraphe3.show("slow");
+            $(this).text("Masquer la suite...");
+        }else{
+            $paragraphe2.hide("slow");
+            $paragraphe3.hide("slow");
+            $(this).text("Afficher la suite...");
+            return false;
+        }
+    });
+ });
+
+ // 4 -- Survoler ce texte avec le pointeur de la souris et surligner
+ $(document).ready(function(){
+    $(".jemepresente h1").mouseover(function(){
+       $(this).css({"background-color" : "#7D4EA6", "font-style" : "italic"}); 
+    });  
+    $(".jemepresente h1").mouseout(function(){
+       $(this).css({"background-color" : "", "font-style" : ""}); 
+    });      
+});
+
+// 5 -- Afficher / Cacher
+$(document).ready(function(){
+    $(".aff a").click(function(){
+        //event.preventDefault(); // Pour éviter le comportement par défaut du lien
+        $(".cacher").toggle(); // Cela va alterner entre afficher et cacher l'élément ayant la classe "cacher"
+    });
+});
+
+// 6 -- Liste cachée qui apparait au click
+ $(document).ready(function(){
+    $(".os ul").hide(); // Cache toutes les listes ul à l'intérieur de l'élément avec la classe "os"
+    $(".os h3").on("click", function(){
+        $(this).next("ul").slideToggle('slow'); // Affiche ou cache la liste ul suivant l'élément h3 cliqué
+    });
+});
+
+// -- 7 Mettre une partie du paragraphe en italic
+$(document).ready(function() {
+    $(".testitalic").css("font-style", "italic");
+});
+
+
+
 
 
 

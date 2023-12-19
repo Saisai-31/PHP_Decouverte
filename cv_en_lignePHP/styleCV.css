@@ -10,6 +10,11 @@ body, html {
 
 }
 
+
+.cacher{
+  display: none; /* A enlever apres le TP */
+ }
+
 a{
   scroll-behavior: smooth;
 }
@@ -291,6 +296,8 @@ header{
   border-radius: 20px;
   width: 400px;
   display: flex;
+  flex-direction: column; /* rajouter pour le tp */
+  cursor: pointer;
   padding: 10px;
 }
 .langages{
@@ -427,25 +434,29 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   padding-bottom: 1px;
 }
 
-.monadresse .adresse {
-  visibility: hidden; /* Cache le numéro de téléphone par défaut */
-  opacity: 0; /* Cache également le numéro de téléphone */
-  transition: opacity 0.3s ease; /* Ajoute une transition pour une apparition en douceur */
-}
+
 .adresse{
   text-align: center;
   margin-bottom: 0;
 }
-.monadresse:hover .adresse {
-  visibility: visible; /* Rend le numéro de téléphone visible au survol */
-  opacity: 1; /* Rend le numéro de téléphone complètement visible */
-}
+
 .monadresse{
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
+
+
+.monadresse .adresse {
+  visibility: hidden; /* Cache le numéro de téléphone par défaut */
+  opacity: 0; /* Cache également le numéro de téléphone */
+  transition: opacity 0.3s ease; /*Ajoute une transition pour une apparition en douceur */
+}
+.monadresse:hover .adresse {
+  visibility: visible; /* Rend le numéro de téléphone visible au survol */
+  opacity: 1; /* Rend le numéro de téléphone complètement visible */
+}
 .montelephone .numeros {
   visibility: hidden; /* Cache le numéro de téléphone par défaut */
   opacity: 0; /* Cache également le numéro de téléphone */
@@ -455,6 +466,8 @@ Modal : Cet élément est utilisé pour créer une fenêtre modale, centrée à 
   visibility: visible; /* Rend le numéro de téléphone visible au survol */
   opacity: 1; /* Rend le numéro de téléphone complètement visible */
 }
+
+
 .montelephone{
   cursor: pointer;
   display: flex;

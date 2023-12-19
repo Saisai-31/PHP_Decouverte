@@ -8,7 +8,8 @@
         <div class="presentation animate-right">
             <div id="bonjour">
                 <p>Bonjour,</p>
-                <p>je suis Cyril</p>
+                <p class="aff"><a href="#">Afficher / Masquer</a></p>
+                <p class="cacher">je suis Cyril</p>
                 <h1 class="dwwm">Développeur Web Junior</h1>
             </div>
             <div id="icones">
@@ -35,30 +36,32 @@
         <div class="imgpresentation">
             <a href="#presentation"><img src="images/presentation.png" alt="Presentation" height="100"></a>
         </div>
-        <div class="jemepresente">
-        <p>
+        <div class="jemepresente"> 
             <h1>Cyril Pholoppe</h1> 
-            Je suis professionnel polyvalent ayant évolué dans des domaines aussi divers que la vente, la gestion d'entreprise, le travail en usine et même les services de ménage. Cette expérience hétéroclite m'a apporté une grande capacité d'adaptation, une autonomie affirmée et une aptitude à travailler efficacement en équipe.
-        </p>
-        
-        <h2>Parcours Professionnel</h2>
-        <p>
-            Commercial et Gérant d'Entreprise - Ayant occupé des postes de commercial et de gérant d'entreprise, j'ai acquis des compétences solides en matière de communication, de négociation et de gestion d'équipe. Ces expériences m'ont également permis de développer un sens aigu du service client. 
-        </p>
-        <p>
-            Travail à l'Usine - Mon passage à l'usine m'a enseigné la rigueur, la gestion du temps et la résolution efficace des problèmes, compétences qui sont cruciales dans le monde professionnel.
-        </p>
-        <p>
-            Services de Ménage - Les expériences dans les services de ménage ont renforcé mon sens du détail, de l'organisation et de la propreté, des qualités qui se révèlent précieuses dans tout projet, y compris le développement web. 
-        </p>
-        
+            <p class="testitalic">
+                Je suis professionnel polyvalent ayant évolué dans des domaines aussi divers que la vente, la gestion d'entreprise, le travail en usine et même les services de ménage. Cette expérience hétéroclite m'a apporté une grande capacité d'adaptation, une autonomie affirmée et une aptitude à travailler efficacement en équipe.
+            </p>
+            
+            <h2>Parcours Professionnel</h2>
+            <p>
+                Commercial et Gérant d'Entreprise - Ayant occupé des postes de commercial et de gérant d'entreprise, j'ai acquis des compétences solides en matière de communication, de négociation et de gestion d'équipe. Ces expériences m'ont également permis de développer un sens aigu du service client. 
+            </p>
+            <p>
+                Travail à l'Usine - Mon passage à l'usine m'a enseigné la rigueur, la gestion du temps et la résolution efficace des problèmes, compétences qui sont cruciales dans le monde professionnel.
+            </p>
+            <p>
+                Services de Ménage - Les expériences dans les services de ménage ont renforcé mon sens du détail, de l'organisation et de la propreté, des qualités qui se révèlent précieuses dans tout projet, y compris le développement web. 
+            </p>
+            <a class="suite" href="#">Afficher la suite...</a>
+            
             <h2>Reconversion Professionnelle</h2> 
-        <p>
-                Actuellement, je suis en reconversion professionnelle avec un focus particulier sur le monde du développement web et web mobile. Je suis en cours d'obtention du titre professionnel de Développeur Web et Web Mobile, ce qui me permet d'acquérir des compétences techniques pointues pour répondre aux défis du monde numérique.
-        </p>
-        <p>
-            Je suis enthousiaste à l'idée de mettre à profit ma polyvalence et mes compétences nouvellement acquises en développement web. N'hésitez pas à me contacter pour discuter de projets passionnants ou de toute opportunité de collaboration dans le domaine du web.
-        </p>
+            <p>
+                    Actuellement, je suis en reconversion professionnelle avec un focus particulier sur le monde du développement web et web mobile. Je suis en cours d'obtention du titre professionnel de Développeur Web et Web Mobile, ce qui me permet d'acquérir des compétences techniques pointues pour répondre aux défis du monde numérique.
+            </p>
+            <p>
+                Je suis enthousiaste à l'idée de mettre à profit ma polyvalence et mes compétences nouvellement acquises en développement web. N'hésitez pas à me contacter pour discuter de projets passionnants ou de toute opportunité de collaboration dans le domaine du web.
+            </p>
+            
         </div>
     </section>
 
@@ -71,7 +74,8 @@
 
         <div class="competences">
             <div class="os">
-                <ul><h3>Système d'exploitation</h3>  
+            <h3>Système d'exploitation</h3>
+                <ul>  
                     <li>Windows</li>
                     <li>Mac</li>
                     <li>Linux</li>

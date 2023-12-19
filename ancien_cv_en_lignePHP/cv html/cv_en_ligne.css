@@ -1,0 +1,232 @@
+/* Présentation général de la page */
+
+body{
+    background-image:url(nature.jpg);
+    background-attachment: fixed;
+    background-size: 800px 600px contain;
+    background-repeat: no-repeat;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+h3,h2{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    font-weight: bolder;
+}
+
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flecheHaut{
+    margin-left: 95%;
+}
+
+/* Boutton menu */
+
+#button{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px 20px 50px;
+}
+
+.but{
+    height: 50px;   
+    width: 100px;
+}
+
+button{
+    height: 5vh;
+    width: 10vw;
+    font-size: medium;
+    border-radius: 50px;
+    background-color: aquamarine;
+    position: fixed;
+    box-shadow:5px 5px 5px 5px rgba(0,0,0,0.5);
+    
+}
+/* Liens */
+
+button:hover{
+    transform: scale(1.5);
+}
+
+a:visited{
+    color: purple;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Bandeau haut et bas */
+
+.curriculum{
+    text-align: center;
+    border: 1px solid;
+    background-color: rgb(123, 192, 12);
+    border-radius: 30px;
+}
+
+/* Accueil */
+
+span{
+    font-weight: bold;
+}
+
+.curri{
+    border-radius: 50px;
+    border: 5px ridge;
+    box-shadow:10px 10px 10px 10px rgba(0,0,0,0.5);
+    margin-top: 5%;
+    margin-left: 40%;
+    height: 450px;
+    width: 55%;
+    padding-top: 5%;
+    background-color: rgb(145, 238, 145,0.50);
+}
+
+.coordonnée{
+    margin:5%;
+}
+
+.pho{
+    margin-top: 12%;
+    margin-left: 7%;
+    float: left;
+}
+
+.photo{
+   border-radius: 50px;
+   border: 5px ridge;
+   box-shadow:10px 10px 10px 10px rgba(0,0,0,0.5);
+}
+
+.photo:hover {
+    transform: scale(1.5);
+}
+
+/* Présentation */
+
+.presenationtexte{
+    text-align: center;
+}
+
+.presentation{
+    height: 150px;
+    margin-top: 20%;
+}
+
+/* Compétences */
+
+.skills{
+    margin-top: 5%;
+    display: flex;
+    padding-left: 5%;
+    border: 5px outset;
+    box-shadow:10px 10px 10px 10px rgba(0,0,0,0.5);
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgba(145, 238, 145, 0.50);
+}
+
+.toutlescontainers{
+    border: 5px outset;
+    box-shadow:10px 10px 10px 10px rgba(0,0,0,0.5);
+    display: flex;
+    padding-left: 2%;
+    padding-right: 10%;
+    margin: 5%;
+    height: 300px;
+    margin-bottom: 2px;
+    background-color: rgba(145, 238, 145, 0.50);
+}
+
+/* Portfolio */
+
+.portfolio{
+    margin-top: 20%;
+    height: 150px;
+}
+
+.github{
+    text-align: center;
+}
+
+.photographe{
+    height: 20%;
+    width: 20%;
+}
+.siteInfo{
+    height: 20%;
+    width: 20%;
+}
+
+/* Contact */
+
+.tablecontact{
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 10px;
+    width: auto;
+    border: 5px outset;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.5);
+    background-color: rgba(145, 238, 145, 0.50);
+    border-radius: 20px;
+}
+.tablecontact, tr, td{
+    
+    padding: 10px;
+   
+}
+
+
+
+form{
+    margin: auto;
+    text-align: center;
+    width: 60%;
+}
+fieldset{
+    border: 5px outset;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.5);
+    background-color: rgba(145, 238, 145, 0.50);
+    border-radius: 20px;
+}
+
+
+
+.nom{
+    width: 40%;
+}
+
+.email{
+    width: 40%;
+}
+
+.telephone{
+    width: 40%;
+}
+
+.objet{
+    width: 40%;
+}
+
+.texte{
+    width: 70%;
+}
+
+.envoyer{
+    background-color: green;
+}
+
+.annuler{
+    background-color: lightgreen;
+}
