@@ -1,5 +1,5 @@
 <div class="content">
-    <h1>Les API de Vidéos et Audios</h1>
+    <h1>Les API de Vidéos</h1>
    
     <!-- 
         HTML5 fournit des éléments pour intégrer du multimédia dans les documents, à savoir les éléments <video> et <audio>.
@@ -27,8 +27,7 @@
         <button id="stop">Stop</button>
         <button id="mute">Mute</button>
     </div>
-    
-
+   
     <!-- 
         L'API HTML founit des méthodes et des propriétés pour controler la lecture, la recherche et d'autres aspects multimédia. Les éléments <video> et <audio> sont des instances de la classe HTMLMediaElement.
         Voici quelques une des méthodes et les propriétés les plus courantes de HTMLMediaElement :
@@ -41,27 +40,21 @@
 
     <script>
         $(function(){
-        var video = document.getElementById("video");
-        $("#play").on('click', function(){
-            $("#video").get(0).play();
+            var video = document.getElementById("video");
+            $("#play").on('click', function(){
+                $("#video").get(0).play();
+            });
+            $("#pause").on('click', function(){
+                $("#video").trigger('pause');
+            });
+            $("#stop").on('click', function(){
+                $("#video").trigger('pause').prop("currentTime", 0);
+            });
+            $("#mute").on('click', function(){   
+                video.muted = !video.muted;
+            });   
         });
-        $("#pause").on('click', function(){
-            $("#video").trigger('pause');
-        });
-        $("#stop").on('click', function(){
-            $("#video").trigger('pause').prop("currentTime", 0);
-        });
-        $("#mute").on('click', function(){   
-            video.muted = !video.muted;
-        });
-       
-    });
-
-
     </script>
-
-
-
 
 </div>
 
