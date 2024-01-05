@@ -10,11 +10,6 @@ body, html {
 
 }
 
-
-.cacher{
-  display: none; /* A enlever apres le TP */
- }
-
 a{
   scroll-behavior: smooth;
 }
@@ -191,8 +186,6 @@ header{
   align-items: center;
   justify-content: center;
   padding-top: 10px;
- 
-
 }
 
 #icones{
@@ -278,7 +271,6 @@ header{
   text-align: justify;
 }
 
-
 /* Compétences */
 #comptetence{
   padding-top: 100px;
@@ -296,7 +288,6 @@ header{
   border-radius: 20px;
   width: 400px;
   display: flex;
-  flex-direction: column; /* rajouter pour le tp */
   cursor: pointer;
   padding: 10px;
 }
@@ -593,8 +584,6 @@ input, textarea{
     .formulaire{
       width: 450px;
     }
-    
-
   }
 
   @media screen and (max-width:600px) {   
