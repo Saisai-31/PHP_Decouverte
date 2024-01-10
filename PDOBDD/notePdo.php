@@ -111,7 +111,7 @@ Par défault, le comportement de PDO est d'envoyer la méthode fetch() avec en r
 Nous pouvons modifier ce comportement en precisant le type d'association à utiliser. Pour cela, nous allons ajouter la méthode fetch(), le type d'association que nous souhaitons voir apparaitre. Pour faire apparaitre uniquement le résultat sous la forme d'un tableau associatif, nous écrirons ::FETCH_ASSOC, à la méthode fetch().Les :: signifie que c'est une constante.
 
 ** L'association PDO::FETCH_NUM
-Pour faire apparaitre uniquement le résultat sous la forme d'un tableau numérique (indice), nous écrirons : PDO::NUM, à la méthode fetch().
+Pour faire apparaitre uniquement le résultat sous la forme d'un tableau numérique (indice), nous écrirons : PDO::FETCH_NUM, à la méthode fetch().
 
 ** L'association PDO::FETCH_BOTH
 Par défaut la constante utilisé par PDO est PDO::FETCH_BOTH, qui signifie envoyer les deux tableaux (associatif et numérique).

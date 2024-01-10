@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mysqli connection</title>
 </head>
 <body>
-    
-<?php
+  <h1>Se connecter et afficher des informations avec mysqli</h1>
+  <?php
     $cnx = mysqli_connect("localhost", "toto", "tata", "mabaseauto");
 
     if(mysqli_connect_errno()){

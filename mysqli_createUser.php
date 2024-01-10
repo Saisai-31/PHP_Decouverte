@@ -6,6 +6,7 @@
     <title>Document 2</title>
 </head>
 <body>
+    <h1>Créer un nouvel utilisateur en utilisant mysqli</h1>
     <?php
         $cnx = mysqli_connect("localhost", "root", "", "mabaseauto");
 
