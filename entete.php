@@ -50,10 +50,13 @@
                 <a class="nav-link active" aria-current="page" href="compteur.php">Compteur</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="session.php">Session</a>
+                <a class="nav-link active" aria-current="page" href="api.php">API</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="api.php">API</a>
+                <a class="nav-link active" aria-current="page" href="uploadFile.php">Gestion d'Upload</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="DaD.php">Drop and Drap</a>
                 </li>
             </ul>
             <!-- <form class="d-flex" role="search">
@@ -64,8 +67,6 @@
         </div>
     </nav>
 </header>  
-
-
 
 
 

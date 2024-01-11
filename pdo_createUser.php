@@ -31,6 +31,13 @@
             echo "Une erreur est survenue lors de la création de l'utisateur : ". $e->getMessage();
          }
 
+
+        // Avec PDO, la fermeture explicite de la connexion n'est pas nécessaire dans la plupart des cas. L'objet PDO gère automatiquement la fermeture de la connexion à la base de données une fois que l'objet n'est plus référencé dans votre script.
+
+        // Cependant, si vous souhaitez explicitement fermer la connexion PDO pour libérer les ressources plus tôt dans votre script, vous pouvez le faire en utilisant la méthode null pour détruire l'objet PDO :
+
+        // $cnx = null;
+
     ?>
     
 </body>
