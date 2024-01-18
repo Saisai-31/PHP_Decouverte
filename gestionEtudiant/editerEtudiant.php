@@ -24,15 +24,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="modifierEtudiant.php" enctype="multipart/form-data">
+    <form action="modifierEtudiant.php" enctype="multipart/form-data" method="post">
     <table>
         <tr>
             <td>CODE</td>
-            <td><?php echo($ET['CODE']) ?><input type="hidden" name="code" value="<?php echo($ET['code'])?>"></td>
+            <td><?php echo($ET['code']) ?><input type="hidden" name="code" value="<?php echo($ET['code'])?>"></td>
         </tr>
         <tr>
             <td>Nom : </td>
-            <td><input type="text" name="name" value="<?php echo($ET['nom'])?>"></td>
+            <td><input type="text" name="nom" value="<?php echo($ET['nom'])?>"></td>
         </tr>
         <tr>
             <td>Email : </td>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td>Photo :</td>
-            <td><img src="images/<?php echo($ET['photo'])?>"><input type="file" name="photo"></td>
+            <td><img src="images/<?php echo($ET['photo'])?>"><input type="file" name="photo" value=""></td>
         </tr>
         <tr>
             <td></td>
