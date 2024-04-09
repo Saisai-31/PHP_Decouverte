@@ -1,0 +1,97 @@
+body{
+    background-image: url(nature.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    background-color: rgba(149, 198, 1, 0.9);
+    padding: 15px;
+    margin: 0;
+}
+
+.justify-content-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: auto;
+    margin: 20px;
+}
+
+.form-control{
+    width: 380px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.btn{
+    border-radius: 10px;
+    background-color: rgba(149, 198, 1);
+}
+
+.box-container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 40px groove rgba(149, 198, 1);
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    gap: 10px;
+}
+
+#city{
+    background-color: rgba(149, 198, 1, 0.60);
+}
+#temp{
+    background-color: rgba(79, 87, 25, 0.60);
+}
+#humidity{
+    background-color: rgba(108, 147, 1, 0.50);
+}
+#wind{
+    background-color: rgba(176, 214, 115, 0.50);
+}
+
+@media only screen and (max-width: 600px) {
+    .box-container {
+        width: 80%;
+    }
+    .box {
+        width: 50%;
+    }
+    .form-group{
+        width: 80%;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .form-control{
+        width: 100%;
+        margin: 0;
+    }
+    .btn{
+        height: 30px;
+        margin: 0;
+    }
+}
