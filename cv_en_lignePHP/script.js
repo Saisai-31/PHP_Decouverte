@@ -93,7 +93,7 @@ const sections = document.querySelectorAll('section');
 
 //jQuery
 
-// 1 -- Menu buger, réglage du petit bug pour qu'il se referme correctement
+// Menu buger, réglage du petit bug pour qu'il se referme correctement
 $(document).ready(function(){
     $('.navbar-toggler').click(function(){
         $('#navbarSupportedContent').toggleClass('show');
@@ -114,7 +114,7 @@ $(document).ready(function(){
 // En résumé, ce code utilise jQuery pour détecter les clics sur le bouton de bascule du menu pour l'ouvrir ou le fermer. De plus, il écoute les clics sur l'ensemble du document et ferme le menu si le clic se produit en dehors du menu lui-même.
 
 
-// 2 -- Écrire le script jQuery pour envoyer le formulaire en utilisant AJAX
+// Écrire le script jQuery pour envoyer le formulaire en utilisant AJAX
 $(document).ready(function() {
     $("#monFormulaire").submit(function(event) {
         event.preventDefault(); // Empêche le rechargement de la page

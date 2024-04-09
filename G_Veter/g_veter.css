@@ -306,22 +306,16 @@ legend{
     }
     .Cyril{
         width: 80%;
-        background-color: #D7EDD0;
-        text-align: center;
-        padding: 30px;
-        border-radius: 20px;
     }
     fieldset{
         width: 80%;
-    }
-       
+    }    
 }
 
 @media screen and (max-width:400px) {
     .deroulant{
         width: 390px;
-    }
-    
+    }  
 }
 
 @media screen and (max-width:375px) {
