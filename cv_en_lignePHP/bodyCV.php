@@ -71,8 +71,7 @@
 
         <div class="competences">
             <div class="os">
-            <h3>Système d'exploitation</h3>
-                <ul>  
+                <ul><h3>Système d'exploitation</h3>  
                     <li>Windows</li>
                     <li>Mac</li>
                     <li>Linux</li>
@@ -96,6 +95,8 @@
                     <li>Git</li>
                     <li>MySQL</li>
                     <li>Workbench</li>
+                    <li>phpMyAdmin</li>
+                    <li>Looping</li>
                     <li>Wamp</li>
                     <li>Xampp</li>
                     <li>Figma</li>
