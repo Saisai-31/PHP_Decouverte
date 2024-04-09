@@ -1,5 +1,5 @@
 <footer>
-            <div id="caroussel">
+            <div id="carrousel">
                 <div class="cassImages">
                     <img class="tailleimg" src="images/chats.jpg" alt="Photo de chat">
                     <img class="tailleimg" src="images/chiens.jpeg" alt="Photo de chien">

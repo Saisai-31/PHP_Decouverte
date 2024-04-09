@@ -124,8 +124,8 @@ footer{
     align-items: end;
     padding: 20px;
 }
-/*Carrousel*/
-#caroussel {
+/* Carrousel */
+#carrousel {
     width: 300px;
     height: 225px;
     overflow: hidden;
@@ -295,11 +295,12 @@ legend{
     width: 400px;
     margin-top: 10px;
   }
-/*Ajout des Média Querries pour différents formats de smartphones et tablettes*/
+
+/* Ajout des Média Querries pour différents formats de smartphones et tablettes*/
 @media screen and (max-width:800px) {
     body{
         background: linear-gradient(to right, rgb(125, 24, 219), rgb(11, 192, 208));
-            display: block;
+        display: block;
         }   
     .deroulant{ 
         font-size: small;
@@ -307,27 +308,12 @@ legend{
     .Cyril{
         width: 80%;
     }
-    fieldset{
-        width: 80%;
-    }    
 }
 
 @media screen and (max-width:400px) {
     .deroulant{
         width: 390px;
     }  
-}
-
-@media screen and (max-width:375px) {
-    .deroulant{
-        width: 375px;
-    }
-}
-
-@media screen and (max-width:360px) {
-    .deroulant{
-        width: 360px;
-    }
 }
 
 @media screen and (max-width:280px) {

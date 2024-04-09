@@ -117,10 +117,8 @@ $(document).ready(function() {
         event.stopPropagation(); 
         var formData = $(this).serialize(); // Récupération des données du formulaire
         var form_url = $(this).attr("action");
-
-        
-        $.ajax({
-            
+   
+        $.ajax({     
             type: "POST",
             url: form_url, // Chemin vers mon script PHP
             data: formData,
@@ -128,12 +126,10 @@ $(document).ready(function() {
                 console.log(response);
                 $("#message").html(response);
             },
-            
             error: function(error) {
                 console.error(error);
             }
         });
         return false;
-    });
-    
+    }); 
 });
