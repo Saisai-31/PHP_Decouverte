@@ -3,7 +3,7 @@
     <section id="accueil">
         <div class="divphoto animate-left">
             <img src="images/Cyril.jpg" alt="Ma photo" height="300" class="maphoto">
-            <a class="cv" href="images/Cv_Cyril_Pholoppe.pdf"  target="_blank">Télécharger mon CV</a>
+            <a class="cv" href="images/cvCyrilPholoppeImpression.pdf"  target="_blank">Télécharger mon CV</a>
         </div> 
         <div class="presentation animate-right">
             <div id="bonjour">
@@ -102,6 +102,7 @@
                     <li>Figma</li>
                     <li>Pencil</li>
                     <li>Gimp</li>
+                    <li>WordPress</li>
                 </ul>
             </div>
             <div class="savoirfaire">
@@ -128,23 +129,31 @@
         <div class="portfolio">  
             <div class="photographe" onclick="agrandirPhoto(this, 'images/captureSitePhotographe.png', 'Site responsive d\'une photographe avec HTML5 et CSS3')">
                 <img class="photo" src="images/captureSitePhotographe.png" alt="Site photographe" height="400">
-                <p><br>Site responsive d'une photographe <br> HTML5 et CSS3</p>
+                <p><br>Site responsive d'une photographe <br> HTML5 et CSS3<br> <a href="sitePhotographe/accueil.html" target="_blank"> Voir</a></p>
             </div>
-            <div class="photographe" onclick="agrandirPhoto(this, 'images/Gveter.png', 'Site dynamique et responsive d\'un vétérinaire en HTML5, CSS3, PHP et MySQL')">
-                <img class="photo" src="images/Gveter.png" alt="Site vétérinaire" height="400">
-                <p><br>Site dynamique et responsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL</p>
+            <div class="photographe" onclick="agrandirPhoto(this, 'images/gveter.png', 'Site dynamique et responsive d\'un vétérinaire avec un carrousel en HTML5, CSS3, PHP et MySQL')">
+                <img class="photo" src="images/gveter.png" alt="Site vétérinaire" height="400">
+                <p><br>Site dynamique et responsive d'un vétérinaire  <br> HTML5, CSS3, PHP et MySQL<br> <a href="gVeter/index.php" target="_blank"> Voir</a></p>
             </div>
             <div class="photographe" onclick="agrandirPhoto(this, 'images/meteoApi.png', 'Dashboard météo avec l\'API openweather en HTML5, CSS3 et JavaScript')">
                 <img class="photo" src="images/meteoApi.png" alt="API Météo" height="400">
-                <p><br>Dashboard météo avec l'API openweather <br> HTML5, CSS3 et JavaScript</p>
+                <p><br>Application météo avec l'API openweather <br> HTML5, CSS3, JavaScript, PHP 8.2 et MySQL<br><a href="meteo/index.php" target="_blank"> Voir</a></p>
             </div>
             <div class="photographe" onclick="agrandirPhoto(this, 'images/chonometre.png', 'Chronomètre avec HTML5, CSS3 et JavaScript')">
                 <img class="photo" src="images/chonometre.png" alt="Chronomètre" height="400">
-                <p><br>Chronomètre <br> HTML5, CSS3 et JavaScript</p>
+                <p><br>Chronomètre <br> HTML5, CSS3 et JavaScript<br><a href="chronometre/index.html" target="_blank"> Voir</a></p>
             </div>
             <div class="photographe" onclick="agrandirPhoto(this, 'images/morpion.png', 'Jeu : Tic-tac-toe avec HTML5, CSS3 et JavaScript')">
                 <img class="photo" src="images/morpion.png" alt="Jeu du Morpion" height="400">
-                <p><br>Jeu : Tic-tac-toe <br> HTML5, CSS3 et JavaScript</p>
+                <p><br>Jeu : Tic-tac-toe <br> HTML5, CSS3 et JavaScript<br><a href="morpion/index.html" target="_blank"> Voir</a></p>
+            </div>
+            <div class="photographe" onclick="agrandirPhoto(this, 'images/plumeVagabonde.png', 'Création d/un mini CMS avec HTML5, CSS3, JavaScript, PHP, Composer (Autoload), npm et MySql')">
+                <img class="photo" src="images/plumeVagabonde.png" alt="Mini CMS" height="400">
+                <p><br>Création d'un mini CMS <br> HTML5, CSS3, Bootstrap, JavaScript, <br>PHP 8.2, Composer (Autoload), npm et MySql <a href="https://cyril-pholoppe.creativeapps.fr/" target="_blank"> Voir</a></p>
+            </div>
+            <div class="photographe" onclick="agrandirPhoto(this, 'images/wpPlumeVagabonde.png', 'Reproduction du mini CMS sur WorPress avec WordPress, thème enfant, Bootstrap, PHP 8.2, MySql')">
+                <img class="photo" src="images/wpPlumeVagabonde.png" alt="Mini CMS" height="400">
+                <p><br>Reproduction du mini CMS sur WorPress <br> WordPress, thème enfant, Bootstrap, PHP 8.2, MySql <br> <a href="https://wp-cyril-pholoppe.creativeapps.fr/" target="_blank"> Voir</a></p>
             </div>
         </div>
     </section>
